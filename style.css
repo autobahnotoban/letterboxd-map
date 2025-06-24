@@ -1,49 +1,18 @@
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    text-align: center;
-    margin: 15px 0;
-}
-
-.container {
-    display: flex;
-    height: 85vh;
-}
-
-#sidebar {
-    width: 300px;
-    background-color: #f4f4f4;
-    padding: 10px;
-    overflow-y: auto; 
-    border-right: 1px solid #ddd;
-}
-
-#sidebar h2 {
-    text-align: center;
-    margin-top: 0;
-}
-
-#sidebar ul {
-    list-style-type: none;
-    padding: 0;
-    margin: 0;
-}
-body {
-    font-family: sans-serif;
-    margin: 0;
-    padding: 0;
-}
-
-h1 {
-    text-align: center;
-    margin: 15px 0;
-}
-
-#map {
-    height: 85vh; /* Make the map fill most of the screen */
-    width: 100%;
-}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Director Birthplace Map</title> 
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+    <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css" />
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1>Map of Director Birthplaces</h1>
+    <div id="map"></div>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+    <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

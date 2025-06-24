@@ -1,29 +1,22 @@
-// --- DYNAMICALLY GET USERNAME FROM URL ---
+// --- Get Username and Set Up Page ---
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('user');
 
 if (!username) {
-    document.body.innerHTML = `
-        <div style="text-align: center; padding-top: 50px; font-family: sans-serif;">
-            <h1>Error: No User Specified</h1>
-            <p>Please return to the homepage to select a map.</p>
-        </div>
-    `;
+    document.body.innerHTML = `<div style="text-align: center; padding: 50px; font-family: sans-serif;"><h1>Error: No User Specified</h1><p>Please return to the homepage and select a map.</p></div>`;
     throw new Error("No user specified in URL. Halting script.");
 }
 
 document.title = `${username}'s Director Map`;
 document.querySelector('h1').textContent = `Map of ${username}'s Director Birthplaces`;
 
-// --- 1. INITIALIZE THE MAP ---
+// --- Initialize Map ---
 const map = L.map('map').setView([20, 0], 2);
-
-// --- 2. ADD THE TILE LAYER ---
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// --- 3. DYNAMIC RESIZING LOGIC ---
+// --- Dynamic Resizing Logic ---
 const allCircles = [];
 function getRadiusForZoom(zoomLevel) {
     if (zoomLevel <= 4) return 150000;
@@ -37,23 +30,23 @@ map.on('zoomend', function() {
     allCircles.forEach(circle => { circle.setRadius(newRadius); });
 });
 
-// --- 4. THE MAIN DATA PROCESSING FUNCTION ---
+// --- Main Data Processing Function ---
 async function loadAndPlotData() {
-    console.log(`Starting to load data for user: ${username}`);
+    console.log(`Attempting to load data for user: '${username}'...`);
     try {
         const response = await fetch(`${username}.json`);
-        if (!response.ok) { throw new Error(`Could not find data file for user: ${username}`); }
+        if (!response.ok) { throw new Error(`Could not find data file: ${username}.json`); }
         const rawFilmData = await response.json();
 
         if (!rawFilmData || rawFilmData.length === 0) {
-            console.error("Data file is empty or invalid. Cannot plot dots.");
+            console.error("Data file is empty. Cannot plot dots.");
             return;
         }
 
         // --- STEP A: AGGREGATE BY DIRECTOR ---
         const aggregatedDirectors = {};
         rawFilmData.forEach(film => {
-            if (!film.director_name) return; // Skip records with no director
+            if (!film || !film.director_name || !film.birthplace) return;
             const directorName = film.director_name;
             if (!aggregatedDirectors[directorName]) {
                 aggregatedDirectors[directorName] = { birthplace: film.birthplace, films: [] };
@@ -66,7 +59,6 @@ async function loadAndPlotData() {
         for (const directorName in aggregatedDirectors) {
             const directorInfo = aggregatedDirectors[directorName];
             const birthplace = directorInfo.birthplace;
-            if (!birthplace) continue;
             if (!locationData[birthplace]) {
                 locationData[birthplace] = { directors: [] };
             }
@@ -74,10 +66,12 @@ async function loadAndPlotData() {
         }
 
         // --- STEP C: Geocode and Plot Each UNIQUE LOCATION ---
-        console.log(`[DEBUG] Found ${Object.keys(locationData).length} unique locations to plot.`);
         const provider = new GeoSearch.OpenStreetMapProvider();
+        let plottedCount = 0;
         for (const originalBirthplace of Object.keys(locationData)) {
             let cleanedBirthplace = originalBirthplace.replace(/\[.*?\]/g, '').replace('West Germany', 'Germany').replace('USSR', '').replace('Ukrainian SSR', '').trim().replace(/,$/, '');
+            if (!cleanedBirthplace) continue;
+
             const results = await provider.search({ query: cleanedBirthplace });
 
             if (results && results.length > 0) {
@@ -101,17 +95,16 @@ async function loadAndPlotData() {
                 
                 marker.bindPopup(popupContent).addTo(map);
                 allCircles.push(marker);
-            } else {
-                console.warn(`Could not find coordinates for: ${originalBirthplace}`);
+                plottedCount++;
             }
         }
         
-        console.log("--------------------------------------");
-        console.log("Map processing complete. All locations attempted.");
+        console.log(`Process complete. Successfully plotted ${plottedCount} unique locations.`);
+
     } catch (error) {
         console.error("A critical error occurred:", error);
     }
 }
 
-// --- 5. EXECUTE THE FUNCTION ---
+// --- Execute the Function ---
 loadAndPlotData();
