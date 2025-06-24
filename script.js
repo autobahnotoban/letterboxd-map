@@ -13,6 +13,10 @@ if (!username) {
     throw new Error("No user specified in URL. Halting script.");
 }
 
+// --- DEBUG STEP 1: Confirm the username and filename we are trying to load ---
+const dataFileName = `${username}.json`;
+console.log(`[DEBUG] Attempting to load data for user: '${username}' from file: '${dataFileName}'`);
+
 // Update the page title and heading dynamically.
 document.title = `${username}'s Director Map`;
 document.querySelector('h1').textContent = `Map of ${username}'s Director Birthplaces`;
@@ -41,33 +45,36 @@ map.on('zoomend', function() {
 
 // --- 4. THE MAIN DATA PROCESSING FUNCTION ---
 async function loadAndPlotData() {
-    console.log(`Starting to load data for user: ${username}`);
     try {
-        // --- DYNAMIC FETCH ---
-        // Constructs the filename based on the URL parameter (e.g., 'dave.json').
-        const response = await fetch(`${username}.json`);
-        if (!response.ok) { throw new Error(`Could not find data file for user: ${username}`); }
-        const rawFilmData = await response.json();
+        const response = await fetch(dataFileName);
 
-        // (The aggregation, geocoding, and plotting logic is identical to before)
-        const locationData = {};
-        // ... (This section is unchanged) ...
-
-        for (const originalBirthplace of Object.keys(locationData)) {
-            // ... (This section is unchanged) ...
-            if (results && results.length > 0) {
-                // ... (This section is unchanged) ...
-                const marker = L.circle([location.y, location.x], {
-                    radius: getRadiusForZoom(map.getZoom()),
-                    // ... styles ...
-                });
-                marker.bindPopup(popupContent).addTo(map);
-                allCircles.push(marker);
-            }
+        // --- DEBUG STEP 2: Check if the file was found (HTTP status) ---
+        console.log(`[DEBUG] Fetch response status: ${response.status}`);
+        if (!response.ok) {
+            throw new Error(`Could not find data file '${dataFileName}'. Make sure the file exists and the name is spelled correctly.`);
         }
+        
+        const rawFilmData = await response.json();
+        
+        // --- DEBUG STEP 3: Check if the JSON data is valid and not empty ---
+        console.log(`[DEBUG] Successfully parsed JSON. Found ${rawFilmData.length} records.`);
+        if (rawFilmData.length === 0) {
+            console.error("[CRITICAL] The JSON file is empty. No dots can be plotted.");
+            return; // Stop here if the file is empty
+        }
+
+        // (The rest of the logic is unchanged)
+        const locationData = {};
+        // ... (Aggregation logic) ...
+        for (const originalBirthplace of Object.keys(locationData)) {
+            // ... (Geocoding and plotting logic) ...
+        }
+        
+        console.log("--------------------------------------");
         console.log("Map processing complete.");
+
     } catch (error) {
-        console.error("A critical error occurred:", error);
+        console.error("A critical error occurred, which is why the map is empty:", error);
     }
 }
 
