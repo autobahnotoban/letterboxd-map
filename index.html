@@ -7,28 +7,40 @@
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            text-align: center; 
+            /* REMOVED: text-align: center; */
             padding: 40px; 
             background-color: #f8f9fa;
             color: #333;
         }
-        h1 { font-size: 2.5em; margin-bottom: 10px; }
-        p { font-size: 1.2em; color: #666; margin-bottom: 40px; }
+        h1 { 
+            font-size: 2.5em; 
+            margin-bottom: 10px;
+            text-align: center; /* ADDED: Keep the main title centered */
+        }
+        p { 
+            font-size: 1.2em; 
+            color: #666; 
+            margin-bottom: 40px;
+            text-align: center; /* ADDED: Keep the subtitle centered */
+        }
         a { 
-            font-size: 1.5em; 
+            font-size: 1.2em; /* CHANGED: Made the font a bit smaller */
             display: block; 
-            margin: 20px auto; 
+            margin: 10px auto; /* CHANGED: Reduced the vertical space between links */
             padding: 15px;
-            max-width: 400px;
+            max-width: 600px;  /* CHANGED: Made the buttons a bit wider */
             text-decoration: none;
-            background-color: #0078A8;
-            color: white;
+            background-color: white; /* CHANGED: Made the background white */
+            color: #0078A8;         /* CHANGED: Made the text blue */
             border-radius: 8px;
-            transition: transform 0.2s, background-color 0.2s;
+            transition: transform 0.2s, box-shadow 0.2s; /* CHANGED: Updated transition effect */
+            text-align: left;    /* ADDED: Aligned the text to the left */
+            border: 1px solid #ddd; /* ADDED: A subtle border */
         }
         a:hover {
-            background-color: #005a7e;
-            transform: scale(1.05);
+            /* REMOVED: background-color: #005a7e; */
+            transform: scale(1.02); /* CHANGED: A more subtle hover effect */
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* ADDED: A nice shadow effect on hover */
         }
     </style>
 </head>
