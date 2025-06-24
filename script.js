@@ -1,18 +1,27 @@
-// --- Get Username from URL ---
+// --- Get Username from URL and Set Up Page Elements ---
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('user');
 
+// Get a reference to our status indicator element from map.html
+const statusIndicator = document.getElementById('status-indicator');
+
+// If no user is specified in the URL, display an error and stop the script.
 if (!username) {
     document.body.innerHTML = `<div style="text-align: center; padding: 50px; font-family: sans-serif;"><h1>Error: No User Specified</h1><p>Please return to the homepage and select a map.</p></div>`;
     throw new Error("No user specified in URL. Halting script.");
 }
+
+// Update the page title and the visible title overlay dynamically.
 document.title = `${username}'s Director Map`;
+document.getElementById('title-overlay').textContent = `Map of ${username}'s Director Birthplaces`;
+
 
 // --- Initialize Map ---
 const map = L.map('map').setView([20, 0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
+
 
 // --- Dynamic Resizing Logic ---
 const allCircles = [];
@@ -25,24 +34,26 @@ function getRadiusForZoom(zoomLevel) {
 map.on('zoomend', function() {
     const currentZoom = map.getZoom();
     const newRadius = getRadiusForZoom(currentZoom);
-    allCircles.forEach(circle => { circle.setRadius(newRadius); });
+    allCircles.forEach(circle => {
+        circle.setRadius(newRadius);
+    });
 });
+
 
 // --- Main Data Processing Function ---
 async function loadAndPlotData() {
-    console.log(`Attempting to load data for user: '${username}'...`);
+    statusIndicator.textContent = 'Loading...';
+    statusIndicator.title = `Loading data for ${username}...`;
     try {
         const response = await fetch(`${username}.json`);
         if (!response.ok) { throw new Error(`Could not find data file: ${username}.json`); }
         const rawFilmData = await response.json();
 
         if (!rawFilmData || rawFilmData.length === 0) {
-            console.error("Data file is empty. Cannot plot dots.");
-            return;
+            throw new Error("Data file is empty.");
         }
 
         // --- STEP A: AGGREGATE BY DIRECTOR ---
-        // This creates a list of unique directors and all their films.
         const aggregatedDirectors = {};
         rawFilmData.forEach(film => {
             if (!film || !film.director_name || !film.birthplace) return;
@@ -54,7 +65,6 @@ async function loadAndPlotData() {
         });
 
         // --- STEP B: AGGREGATE BY LOCATION ---
-        // This groups the directors by their shared birthplace.
         const locationData = {};
         for (const directorName in aggregatedDirectors) {
             const directorInfo = aggregatedDirectors[directorName];
@@ -62,7 +72,6 @@ async function loadAndPlotData() {
             if (!locationData[birthplace]) {
                 locationData[birthplace] = { directors: [] };
             }
-            // Add the full director object (name and films) to the location.
             locationData[birthplace].directors.push({
                 name: directorName,
                 films: directorInfo.films
@@ -70,9 +79,17 @@ async function loadAndPlotData() {
         }
         
         // --- STEP C: Geocode and Plot Each UNIQUE LOCATION ---
-        const provider = new GeoSearch.OpenStreetMapProvider();
+        const totalLocations = Object.keys(locationData).length;
+        let processedCount = 0;
         let plottedCount = 0;
+        const provider = new GeoSearch.OpenStreetMapProvider();
+
         for (const originalBirthplace of Object.keys(locationData)) {
+            processedCount++;
+            // Update status indicator's text and tooltip
+            statusIndicator.textContent = `${processedCount}/${totalLocations}`;
+            statusIndicator.title = `Processing: ${originalBirthplace}`;
+            
             let cleanedBirthplace = originalBirthplace.replace(/\[.*?\]/g, '').replace('West Germany', 'Germany').replace('USSR', '').replace('Ukrainian SSR', '').trim().replace(/,$/, '');
             if (!cleanedBirthplace) continue;
 
@@ -82,11 +99,9 @@ async function loadAndPlotData() {
                 const location = results[0];
                 const directorsList = locationData[originalBirthplace].directors;
                 
-                // --- THIS IS THE KEY CHANGE: Building the detailed popup ---
                 let popupContent = `<h3>${originalBirthplace}</h3><hr>`;
                 directorsList.forEach(director => {
                     popupContent += `<h4>${director.name}</h4><ul>`;
-                    // Sort films alphabetically for a clean list
                     director.films.sort().forEach(film => {
                         popupContent += `<li>${film}</li>`;
                     });
@@ -102,15 +117,23 @@ async function loadAndPlotData() {
                     color: "#004C99"
                 });
                 
-                marker.bindPopup(popupContent);
-                marker.addTo(map);
+                marker.bindPopup(popupContent).addTo(map);
                 allCircles.push(marker);
                 plottedCount++;
             }
         }
-        console.log(`Process complete. Successfully plotted ${plottedCount} unique locations.`);
+        
+        // Set final "complete" state
+        statusIndicator.textContent = `✓`; // A checkmark for completion
+        statusIndicator.title = `Complete! Plotted ${plottedCount} of ${totalLocations} locations.`;
+        statusIndicator.classList.add('complete');
+
     } catch (error) {
         console.error("A critical error occurred:", error);
+        // Set final "error" state
+        statusIndicator.textContent = `!`; // An exclamation mark for error
+        statusIndicator.title = `Error: ${error.message}`;
+        statusIndicator.classList.add('error');
     }
 }
 

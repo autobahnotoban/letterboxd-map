@@ -8,16 +8,46 @@
     <link rel="stylesheet" href="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.css" />
     <style>
         body { margin: 0; padding: 0; font-family: sans-serif; }
-        #map { height: 100vh; width: 100%; }
-        /* Styling for popups to make them look nice */
-        .leaflet-popup-content-wrapper { border-radius: 5px; }
-        .leaflet-popup-content h3 { margin: 0 0 10px; padding-bottom: 5px; border-bottom: 1px solid #ddd; }
-        .leaflet-popup-content h4 { margin: 10px 0 5px; }
-        .leaflet-popup-content ul { margin: 0; padding-left: 20px; }
+        #map-container { position: relative; height: 100vh; }
+        #map { height: 100%; }
+        #title-overlay { 
+            position: absolute; top: 10px; left: 50%; transform: translateX(-50%); 
+            z-index: 1000; background: rgba(255, 255, 255, 0.8);
+            padding: 5px 15px; border-radius: 5px; font-size: 1.5em;
+            pointer-events: none; /* Let clicks pass through */
+        }
+        /* --- NEW MINIMALIST STYLES --- */
+        #status-indicator {
+            position: absolute;
+            top: 10px;
+            right: 10px;
+            z-index: 1000;
+            background: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 12px; /* Pill shape */
+            font-size: 0.8em;
+            font-family: monospace; /* Gives a nice "technical" look */
+            box-shadow: 0 1px 5px rgba(0,0,0,0.4);
+            transition: all 0.3s ease;
+        }
+        /* Style for the final "complete" state */
+        #status-indicator.complete {
+            background-color: #28a745; /* Green */
+        }
+        /* Style for an error state */
+        #status-indicator.error {
+            background-color: #dc3545; /* Red */
+        }
     </style>
 </head>
 <body>
-    <div id="map"></div>
+    <div id="map-container">
+        <h1 id="title-overlay">Director Map</h1>
+        <!-- The new, compact status indicator -->
+        <div id="status-indicator" title="Initializing...">...</div>
+        <div id="map"></div>
+    </div>
     <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
     <script src="https://unpkg.com/leaflet-geosearch@3.0.0/dist/geosearch.umd.js"></script>
     <script src="script.js"></script>
