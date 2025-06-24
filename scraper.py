@@ -3,7 +3,7 @@ from bs4 import BeautifulSoup
 import time
 
 BASE_URL = "https://letterboxd.com"
-START_URL = f"{BASE_URL}/blessedheart/films/"
+START_URL = f"{BASE_URL}/arabaci/films/"
 OUTPUT_FILENAME = "film_list.txt"
 
 

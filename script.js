@@ -1,4 +1,4 @@
-// --- Get Username from URL and Set Up Page Elements ---
+
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('user');
 const statusOverlay = document.getElementById('status-overlay');
@@ -10,13 +10,13 @@ if (!username) {
 document.title = `${username}'s Director Map`;
 document.getElementById('title-overlay').textContent = `Map of ${username}'s Director Birthplaces`;
 
-// --- Initialize Map ---
+
 const map = L.map('map').setView([20, 0], 2);
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
-// --- Dynamic Resizing Logic ---
+
 const allCircles = [];
 function getRadiusForZoom(zoomLevel) {
     if (zoomLevel <= 4) return 150000;
@@ -32,7 +32,7 @@ map.on('zoomend', function() {
     });
 });
 
-// --- Main Data Processing Function ---
+
 async function loadAndPlotData() {
     statusOverlay.textContent = `Loading data for ${username}...`;
     try {
@@ -42,7 +42,7 @@ async function loadAndPlotData() {
 
         if (!rawFilmData || rawFilmData.length === 0) { throw new Error("Data file is empty."); }
 
-        // --- STEP A: AGGREGATE BY DIRECTOR ---
+
         const aggregatedDirectors = {};
         rawFilmData.forEach(film => {
             if (!film || !film.director_name || !film.birthplace) return;
@@ -53,7 +53,7 @@ async function loadAndPlotData() {
             aggregatedDirectors[directorName].films.push(film.film_title);
         });
 
-        // --- STEP B: AGGREGATE BY LOCATION ---
+
         const locationData = {};
         for (const directorName in aggregatedDirectors) {
             const directorInfo = aggregatedDirectors[directorName];
@@ -77,7 +77,7 @@ async function loadAndPlotData() {
             const results = await provider.search({ query: cleanedBirthplace });
 
             if (results && results.length > 0) {
-                // Update status with the correct format
+
                 statusOverlay.textContent = `Added: ${originalBirthplace} (${processedCount}/${totalLocations})`;
                 
                 const location = results[0];
@@ -104,17 +104,17 @@ async function loadAndPlotData() {
             }
         }
         
-        // Set final "complete" state
+
         statusOverlay.textContent = `Complete! Plotted ${plottedCount} of ${totalLocations} locations.`;
         statusOverlay.classList.add('complete');
 
     } catch (error) {
         console.error("A critical error occurred:", error);
-        // Set final "error" state
+
         statusOverlay.textContent = `Error: ${error.message}`;
         statusOverlay.classList.add('error');
     }
 }
 
-// --- Execute the Function ---
+
 loadAndPlotData();
