@@ -7,40 +7,28 @@
     <style>
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            /* REMOVED: text-align: center; */
+            text-align: center; 
             padding: 40px; 
             background-color: #f8f9fa;
             color: #333;
         }
-        h1 { 
-            font-size: 2.5em; 
-            margin-bottom: 10px;
-            text-align: center; /* ADDED: Keep the main title centered */
-        }
-        p { 
-            font-size: 1.2em; 
-            color: #666; 
-            margin-bottom: 40px;
-            text-align: center; /* ADDED: Keep the subtitle centered */
-        }
+        h1 { font-size: 2.5em; margin-bottom: 10px; }
+        p { font-size: 1.2em; color: #666; margin-bottom: 40px; }
         a { 
-            font-size: 1.2em; /* CHANGED: Made the font a bit smaller */
+            font-size: 1.5em; 
             display: block; 
-            margin: 10px auto; /* CHANGED: Reduced the vertical space between links */
+            margin: 20px auto; 
             padding: 15px;
-            max-width: 600px;  /* CHANGED: Made the buttons a bit wider */
+            max-width: 400px;
             text-decoration: none;
-            background-color: white; /* CHANGED: Made the background white */
-            color: #0078A8;         /* CHANGED: Made the text blue */
+            background-color: #0078A8;
+            color: white;
             border-radius: 8px;
-            transition: transform 0.2s, box-shadow 0.2s; /* CHANGED: Updated transition effect */
-            text-align: left;    /* ADDED: Aligned the text to the left */
-            border: 1px solid #ddd; /* ADDED: A subtle border */
+            transition: transform 0.2s, background-color 0.2s;
         }
         a:hover {
-            /* REMOVED: background-color: #005a7e; */
-            transform: scale(1.02); /* CHANGED: A more subtle hover effect */
-            box-shadow: 0 4px 15px rgba(0,0,0,0.1); /* ADDED: A nice shadow effect on hover */
+            background-color: #005a7e;
+            transform: scale(1.05);
         }
     </style>
 </head>
@@ -49,10 +37,9 @@
     <p>Choose a map to view:</p>
     
     <!-- Each link points to map.html with a different 'user' parameter -->
-    <a href="map.html?user=blessedheart">blessedheart</a>
-    <a href="map.html?user=arabaci">arabaci</a>
+    <a href="map.html?user=blessedheart">blessedheart's Map</a>
+    <a href="map.html?user=arabaci">arabaci's Map</a>
     <!-- To add more, just copy a line, change the user name, and make sure you have the corresponding .json file -->
-    <!-- <a href="map.html?user=dave">Dave's Map</a> -->
 
 </body>
 </html>
