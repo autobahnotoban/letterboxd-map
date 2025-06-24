@@ -1,4 +1,4 @@
-// --- Get Username and Set Up Page ---
+// --- Get Username from URL ---
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('user');
 
@@ -6,9 +6,7 @@ if (!username) {
     document.body.innerHTML = `<div style="text-align: center; padding: 50px; font-family: sans-serif;"><h1>Error: No User Specified</h1><p>Please return to the homepage and select a map.</p></div>`;
     throw new Error("No user specified in URL. Halting script.");
 }
-
 document.title = `${username}'s Director Map`;
-document.getElementById('title-overlay').textContent = `Map of ${username}'s Director Birthplaces`;
 
 // --- Initialize Map ---
 const map = L.map('map').setView([20, 0], 2);
@@ -16,8 +14,23 @@ L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
     attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
 }).addTo(map);
 
+// --- Dynamic Resizing Logic ---
+const allCircles = [];
+function getRadiusForZoom(zoomLevel) {
+    if (zoomLevel <= 4) return 150000;
+    if (zoomLevel <= 6) return 50000;
+    if (zoomLevel <= 9) return 10000;
+    return 1500;
+}
+map.on('zoomend', function() {
+    const currentZoom = map.getZoom();
+    const newRadius = getRadiusForZoom(currentZoom);
+    allCircles.forEach(circle => { circle.setRadius(newRadius); });
+});
+
 // --- Main Data Processing Function ---
 async function loadAndPlotData() {
+    console.log(`Attempting to load data for user: '${username}'...`);
     try {
         const response = await fetch(`${username}.json`);
         if (!response.ok) { throw new Error(`Could not find data file: ${username}.json`); }
@@ -28,7 +41,8 @@ async function loadAndPlotData() {
             return;
         }
 
-        // --- STEP A: AGGREGATE BY DIRECTOR (including films) ---
+        // --- STEP A: AGGREGATE BY DIRECTOR ---
+        // This creates a list of unique directors and all their films.
         const aggregatedDirectors = {};
         rawFilmData.forEach(film => {
             if (!film || !film.director_name || !film.birthplace) return;
@@ -40,6 +54,7 @@ async function loadAndPlotData() {
         });
 
         // --- STEP B: AGGREGATE BY LOCATION ---
+        // This groups the directors by their shared birthplace.
         const locationData = {};
         for (const directorName in aggregatedDirectors) {
             const directorInfo = aggregatedDirectors[directorName];
@@ -47,13 +62,13 @@ async function loadAndPlotData() {
             if (!locationData[birthplace]) {
                 locationData[birthplace] = { directors: [] };
             }
-            // Add the director's name AND their list of films
+            // Add the full director object (name and films) to the location.
             locationData[birthplace].directors.push({
                 name: directorName,
                 films: directorInfo.films
             });
         }
-
+        
         // --- STEP C: Geocode and Plot Each UNIQUE LOCATION ---
         const provider = new GeoSearch.OpenStreetMapProvider();
         let plottedCount = 0;
@@ -67,7 +82,7 @@ async function loadAndPlotData() {
                 const location = results[0];
                 const directorsList = locationData[originalBirthplace].directors;
                 
-                // --- RE-IMPLEMENTED POPUP WITH FILMS ---
+                // --- THIS IS THE KEY CHANGE: Building the detailed popup ---
                 let popupContent = `<h3>${originalBirthplace}</h3><hr>`;
                 directorsList.forEach(director => {
                     popupContent += `<h4>${director.name}</h4><ul>`;
@@ -78,19 +93,22 @@ async function loadAndPlotData() {
                     popupContent += `</ul>`;
                 });
 
-                L.circleMarker([location.y, location.x], {
-                    radius: 8,
+                const initialRadius = getRadiusForZoom(map.getZoom());
+                const marker = L.circle([location.y, location.x], {
+                    radius: initialRadius,
                     fillColor: "#3388ff",
-                    color: "#005a7e", // A darker border for the light blue fill
+                    fillOpacity: 0.5,
                     weight: 1,
-                    fillOpacity: 0.7
-                }).addTo(map)
-                  .bindPopup(popupContent);
+                    color: "#004C99"
+                });
                 
+                marker.bindPopup(popupContent);
+                marker.addTo(map);
+                allCircles.push(marker);
                 plottedCount++;
             }
         }
-        console.log(`Plotting complete. Successfully plotted ${plottedCount} unique locations.`);
+        console.log(`Process complete. Successfully plotted ${plottedCount} unique locations.`);
     } catch (error) {
         console.error("A critical error occurred:", error);
     }
