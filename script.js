@@ -2,7 +2,6 @@
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('user');
 
-// If no user is specified in the URL, display an error and stop the script.
 if (!username) {
     document.body.innerHTML = `
         <div style="text-align: center; padding-top: 50px; font-family: sans-serif;">
@@ -13,11 +12,6 @@ if (!username) {
     throw new Error("No user specified in URL. Halting script.");
 }
 
-// --- DEBUG STEP 1: Confirm the username and filename we are trying to load ---
-const dataFileName = `${username}.json`;
-console.log(`[DEBUG] Attempting to load data for user: '${username}' from file: '${dataFileName}'`);
-
-// Update the page title and heading dynamically.
 document.title = `${username}'s Director Map`;
 document.querySelector('h1').textContent = `Map of ${username}'s Director Birthplaces`;
 
@@ -45,36 +39,77 @@ map.on('zoomend', function() {
 
 // --- 4. THE MAIN DATA PROCESSING FUNCTION ---
 async function loadAndPlotData() {
+    console.log(`Starting to load data for user: ${username}`);
     try {
-        const response = await fetch(dataFileName);
-
-        // --- DEBUG STEP 2: Check if the file was found (HTTP status) ---
-        console.log(`[DEBUG] Fetch response status: ${response.status}`);
-        if (!response.ok) {
-            throw new Error(`Could not find data file '${dataFileName}'. Make sure the file exists and the name is spelled correctly.`);
-        }
-        
+        const response = await fetch(`${username}.json`);
+        if (!response.ok) { throw new Error(`Could not find data file for user: ${username}`); }
         const rawFilmData = await response.json();
-        
-        // --- DEBUG STEP 3: Check if the JSON data is valid and not empty ---
-        console.log(`[DEBUG] Successfully parsed JSON. Found ${rawFilmData.length} records.`);
-        if (rawFilmData.length === 0) {
-            console.error("[CRITICAL] The JSON file is empty. No dots can be plotted.");
-            return; // Stop here if the file is empty
+
+        if (!rawFilmData || rawFilmData.length === 0) {
+            console.error("Data file is empty or invalid. Cannot plot dots.");
+            return;
         }
 
-        // (The rest of the logic is unchanged)
+        // --- STEP A: AGGREGATE BY DIRECTOR ---
+        const aggregatedDirectors = {};
+        rawFilmData.forEach(film => {
+            if (!film.director_name) return; // Skip records with no director
+            const directorName = film.director_name;
+            if (!aggregatedDirectors[directorName]) {
+                aggregatedDirectors[directorName] = { birthplace: film.birthplace, films: [] };
+            }
+            aggregatedDirectors[directorName].films.push(film.film_title);
+        });
+
+        // --- STEP B: AGGREGATE BY LOCATION ---
         const locationData = {};
-        // ... (Aggregation logic) ...
+        for (const directorName in aggregatedDirectors) {
+            const directorInfo = aggregatedDirectors[directorName];
+            const birthplace = directorInfo.birthplace;
+            if (!birthplace) continue;
+            if (!locationData[birthplace]) {
+                locationData[birthplace] = { directors: [] };
+            }
+            locationData[birthplace].directors.push({ name: directorName, films: directorInfo.films });
+        }
+
+        // --- STEP C: Geocode and Plot Each UNIQUE LOCATION ---
+        console.log(`[DEBUG] Found ${Object.keys(locationData).length} unique locations to plot.`);
+        const provider = new GeoSearch.OpenStreetMapProvider();
         for (const originalBirthplace of Object.keys(locationData)) {
-            // ... (Geocoding and plotting logic) ...
+            let cleanedBirthplace = originalBirthplace.replace(/\[.*?\]/g, '').replace('West Germany', 'Germany').replace('USSR', '').replace('Ukrainian SSR', '').trim().replace(/,$/, '');
+            const results = await provider.search({ query: cleanedBirthplace });
+
+            if (results && results.length > 0) {
+                const location = results[0];
+                const directorsList = locationData[originalBirthplace].directors;
+                let popupContent = `<h3>${originalBirthplace}</h3><hr>`;
+                directorsList.forEach(director => {
+                    popupContent += `<h4>${director.name}</h4><ul>`;
+                    director.films.forEach(film => { popupContent += `<li>${film}</li>`; });
+                    popupContent += `</ul>`;
+                });
+
+                const initialRadius = getRadiusForZoom(map.getZoom());
+                const marker = L.circle([location.y, location.x], {
+                    radius: initialRadius,
+                    fillColor: "#3388ff",
+                    fillOpacity: 0.5,
+                    weight: 1,
+                    color: "#004C99"
+                });
+                
+                marker.bindPopup(popupContent).addTo(map);
+                allCircles.push(marker);
+            } else {
+                console.warn(`Could not find coordinates for: ${originalBirthplace}`);
+            }
         }
         
         console.log("--------------------------------------");
-        console.log("Map processing complete.");
-
+        console.log("Map processing complete. All locations attempted.");
     } catch (error) {
-        console.error("A critical error occurred, which is why the map is empty:", error);
+        console.error("A critical error occurred:", error);
     }
 }
 
