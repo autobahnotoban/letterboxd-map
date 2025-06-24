@@ -1,10 +1,10 @@
 // --- Get Username from URL and Set Up Page Elements ---
 const urlParams = new URLSearchParams(window.location.search);
 const username = urlParams.get('user');
-const statusIndicator = document.getElementById('status-indicator');
+const statusOverlay = document.getElementById('status-overlay');
 
 if (!username) {
-    document.body.innerHTML = `<div style="text-align: center; padding: 50px; font-family: sans-serif;"><h1>Error: No User Specified</h1><p>Please return to the homepage and select a map.</p></div>`;
+    document.body.innerHTML = `<div style="text-align: center; padding: 50px; font-family: sans-serif;"><h1>Error: No User Specified</h1><p>Please return to the homepage.</p></div>`;
     throw new Error("No user specified in URL. Halting script.");
 }
 document.title = `${username}'s Director Map`;
@@ -34,8 +34,7 @@ map.on('zoomend', function() {
 
 // --- Main Data Processing Function ---
 async function loadAndPlotData() {
-    statusIndicator.textContent = '...';
-    statusIndicator.title = `Loading data for ${username}...`;
+    statusOverlay.textContent = `Loading data for ${username}...`;
     try {
         const response = await fetch(`${username}.json`);
         if (!response.ok) { throw new Error(`Could not find data file: ${username}.json`); }
@@ -43,7 +42,7 @@ async function loadAndPlotData() {
 
         if (!rawFilmData || rawFilmData.length === 0) { throw new Error("Data file is empty."); }
 
-        // --- Aggregation logic (unchanged) ---
+        // --- STEP A: AGGREGATE BY DIRECTOR ---
         const aggregatedDirectors = {};
         rawFilmData.forEach(film => {
             if (!film || !film.director_name || !film.birthplace) return;
@@ -53,6 +52,8 @@ async function loadAndPlotData() {
             }
             aggregatedDirectors[directorName].films.push(film.film_title);
         });
+
+        // --- STEP B: AGGREGATE BY LOCATION ---
         const locationData = {};
         for (const directorName in aggregatedDirectors) {
             const directorInfo = aggregatedDirectors[directorName];
@@ -62,7 +63,7 @@ async function loadAndPlotData() {
             }
             locationData[birthplace].directors.push({ name: directorName, films: directorInfo.films });
         }
-        
+
         const totalLocations = Object.keys(locationData).length;
         let processedCount = 0;
         let plottedCount = 0;
@@ -70,18 +71,15 @@ async function loadAndPlotData() {
 
         for (const originalBirthplace of Object.keys(locationData)) {
             processedCount++;
-            
-            // --- THIS IS THE KEY FIX ---
-            // The VISIBLE TEXT is ONLY the short counter.
-            statusIndicator.textContent = `${processedCount}/${totalLocations}`;
-            // The HOVER TEXT (title attribute) gets the long description.
-            statusIndicator.title = `Processing: ${originalBirthplace}`;
-            
             let cleanedBirthplace = originalBirthplace.replace(/\[.*?\]/g, '').replace('West Germany', 'Germany').replace('USSR', '').replace('Ukrainian SSR', '').trim().replace(/,$/, '');
             if (!cleanedBirthplace) continue;
+
             const results = await provider.search({ query: cleanedBirthplace });
 
             if (results && results.length > 0) {
+                // Update status with the correct format
+                statusOverlay.textContent = `Added: ${originalBirthplace} (${processedCount}/${totalLocations})`;
+                
                 const location = results[0];
                 const directorsList = locationData[originalBirthplace].directors;
                 let popupContent = `<h3>${originalBirthplace}</h3><hr>`;
@@ -101,20 +99,20 @@ async function loadAndPlotData() {
                 marker.bindPopup(popupContent).addTo(map);
                 allCircles.push(marker);
                 plottedCount++;
+            } else {
+                statusOverlay.textContent = `Skipping: ${originalBirthplace} (${processedCount}/${totalLocations})`;
             }
         }
         
         // Set final "complete" state
-        statusIndicator.textContent = `✓`;
-        statusIndicator.title = `Complete! Plotted ${plottedCount} of ${totalLocations} locations.`;
-        statusIndicator.classList.add('complete');
+        statusOverlay.textContent = `Complete! Plotted ${plottedCount} of ${totalLocations} locations.`;
+        statusOverlay.classList.add('complete');
 
     } catch (error) {
         console.error("A critical error occurred:", error);
         // Set final "error" state
-        statusIndicator.textContent = `!`;
-        statusIndicator.title = `Error: ${error.message}`;
-        statusIndicator.classList.add('error');
+        statusOverlay.textContent = `Error: ${error.message}`;
+        statusOverlay.classList.add('error');
     }
 }
 
