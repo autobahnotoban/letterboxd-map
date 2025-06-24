@@ -1,0 +1,10 @@
+# In .gitignore
+
+# Ignore the virtual environment folder
+venv/
+
+# Ignore the config file containing secrets
+config.py
+
+# Ignore Python's cache files
+__pycache__/
