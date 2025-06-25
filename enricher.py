@@ -5,7 +5,6 @@ import json
 from geopy.geocoders import Nominatim
 from pathlib import Path
 
-# --- Configuration ---
 try:
     from config import API_KEY
 except ImportError:
@@ -17,7 +16,6 @@ TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/movie"
 TMDB_DETAILS_URL = "https://api.themoviedb.org/3/movie/"
 TMDB_PERSON_URL = "https://api.themoviedb.org/3/person/"
 
-# (The search, get_director, and geocode functions are unchanged)
 def search_movie_id(title, year):
     params = {'api_key': API_KEY, 'query': title}
     if year and year != 'N/A':
@@ -65,7 +63,6 @@ def geocode_location(location_name, geolocator, cache):
     cache[location_name] = (None, None, None)
     return None, None, None
 
-# --- Main Execution ---
 if __name__ == "__main__":
     input_file = Path(f"{INPUT_CSV_USERNAME}_watched_films.csv")
     if not input_file.exists():
@@ -97,8 +94,6 @@ if __name__ == "__main__":
             if director_name not in aggregated_locations[full_address]["directors"]:
                 aggregated_locations[full_address]["directors"][director_name] = []
             aggregated_locations[full_address]["directors"][director_name].append(title)
-
-    # --- Final JSON Assembly (THE FIX IS HERE) ---
     final_json_data = []
     for place, data in aggregated_locations.items():
         popup_html = f"<b>{place}</b><hr><ul>"
@@ -112,7 +107,7 @@ if __name__ == "__main__":
             "lat": data["lat"],
             "lon": data["lon"],
             "popup_html": popup_html,
-            "directors": data["directors"] # <--- THIS IS THE NEW, CRUCIAL LINE
+            "directors": data["directors"] 
         })
         
     output_json_filename = f"{INPUT_CSV_USERNAME}.json"
