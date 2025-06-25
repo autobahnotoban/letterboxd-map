@@ -3,840 +3,1759 @@
         "place_name": "Long Beach, Los Angeles County, California, United States",
         "lat": 33.7690164,
         "lon": -118.191604,
-        "popup_html": "<b>Long Beach, Los Angeles County, California, United States</b><hr><ul><li><b>Ava DuVernay:</b> <i>13th</i></li></ul>"
+        "popup_html": "<b>Long Beach, Los Angeles County, California, United States</b><hr><ul><li><b>Ava DuVernay:</b> <i>13th</i></li></ul>",
+        "directors": {
+            "Ava DuVernay": [
+                "13th"
+            ]
+        }
     },
     {
         "place_name": "Iași, Zona Metropolitană Iași, Iași, România",
         "lat": 47.1615598,
         "lon": 27.5837814,
-        "popup_html": "<b>Iași, Zona Metropolitană Iași, Iași, România</b><hr><ul><li><b>Cristian Mungiu:</b> <i>4 Months 3 Weeks And 2 Days</i></li></ul>"
+        "popup_html": "<b>Iași, Zona Metropolitană Iași, Iași, România</b><hr><ul><li><b>Cristian Mungiu:</b> <i>4 Months 3 Weeks And 2 Days</i></li></ul>",
+        "directors": {
+            "Cristian Mungiu": [
+                "4 Months 3 Weeks And 2 Days"
+            ]
+        }
     },
     {
         "place_name": "Reno, Washoe County, Nevada, United States",
         "lat": 39.5261206,
         "lon": -119.8126581,
-        "popup_html": "<b>Reno, Washoe County, Nevada, United States</b><hr><ul><li><b>Curtis Hanson:</b> <i>8 Mile</i></li></ul>"
+        "popup_html": "<b>Reno, Washoe County, Nevada, United States</b><hr><ul><li><b>Curtis Hanson:</b> <i>8 Mile</i></li></ul>",
+        "directors": {
+            "Curtis Hanson": [
+                "8 Mile"
+            ]
+        }
     },
     {
         "place_name": "Duncan, Stephens County, Oklahoma, 73533, United States",
         "lat": 34.5023029,
         "lon": -97.9578129,
-        "popup_html": "<b>Duncan, Stephens County, Oklahoma, 73533, United States</b><hr><ul><li><b>Ron Howard:</b> <i>A Beautiful Mind, The Da Vinci Code</i></li></ul>"
+        "popup_html": "<b>Duncan, Stephens County, Oklahoma, 73533, United States</b><hr><ul><li><b>Ron Howard:</b> <i>A Beautiful Mind, The Da Vinci Code</i></li></ul>",
+        "directors": {
+            "Ron Howard": [
+                "A Beautiful Mind",
+                "The Da Vinci Code"
+            ]
+        }
     },
     {
         "place_name": "Kocaeli, Marmara Bölgesi, Türkiye",
         "lat": 40.8216536,
         "lon": 29.9507184,
-        "popup_html": "<b>Kocaeli, Marmara Bölgesi, Türkiye</b><hr><ul><li><b>Erden Kıral:</b> <i>A Season In Hakkari, Conscience, On Fertile Lands</i></li></ul>"
+        "popup_html": "<b>Kocaeli, Marmara Bölgesi, Türkiye</b><hr><ul><li><b>Erden Kıral:</b> <i>A Season In Hakkari, Conscience, On Fertile Lands</i></li></ul>",
+        "directors": {
+            "Erden Kıral": [
+                "A Season In Hakkari",
+                "Conscience",
+                "On Fertile Lands"
+            ]
+        }
     },
     {
         "place_name": "京都市, 京都府, 日本",
         "lat": 35.0115754,
         "lon": 135.7681441,
-        "popup_html": "<b>京都市, 京都府, 日本</b><hr><ul><li><b>Naoko Yamada:</b> <i>A Silent Voice The Movie</i></li></ul>"
+        "popup_html": "<b>京都市, 京都府, 日本</b><hr><ul><li><b>Naoko Yamada:</b> <i>A Silent Voice The Movie</i></li></ul>",
+        "directors": {
+            "Naoko Yamada": [
+                "A Silent Voice The Movie"
+            ]
+        }
     },
     {
         "place_name": "Tulle, Corrèze, Nouvelle-Aquitaine, France métropolitaine, 19000, France",
         "lat": 45.2678347,
         "lon": 1.7706797,
-        "popup_html": "<b>Tulle, Corrèze, Nouvelle-Aquitaine, France métropolitaine, 19000, France</b><hr><ul><li><b>Éric Rohmer:</b> <i>A Summers Tale</i></li></ul>"
+        "popup_html": "<b>Tulle, Corrèze, Nouvelle-Aquitaine, France métropolitaine, 19000, France</b><hr><ul><li><b>Éric Rohmer:</b> <i>A Summers Tale</i></li></ul>",
+        "directors": {
+            "Éric Rohmer": [
+                "A Summers Tale"
+            ]
+        }
     },
     {
         "place_name": "Hilden, Kreis Mettmann, Nordrhein-Westfalen, Deutschland",
         "lat": 51.1674417,
         "lon": 6.9307271,
-        "popup_html": "<b>Hilden, Kreis Mettmann, Nordrhein-Westfalen, Deutschland</b><hr><ul><li><b>Christian Petzold:</b> <i>Afire, Transit, Undine, Yella</i></li></ul>"
+        "popup_html": "<b>Hilden, Kreis Mettmann, Nordrhein-Westfalen, Deutschland</b><hr><ul><li><b>Christian Petzold:</b> <i>Afire, Transit, Undine, Yella</i></li></ul>",
+        "directors": {
+            "Christian Petzold": [
+                "Afire",
+                "Transit",
+                "Undine",
+                "Yella"
+            ]
+        }
     },
     {
         "place_name": "Bolinas, Marin County, California, United States",
         "lat": 37.9077975,
         "lon": -122.6951957,
-        "popup_html": "<b>Bolinas, Marin County, California, United States</b><hr><ul><li><b>Harmony Korine:</b> <i>Aggro Dr1ft, Baby Invasion, Julien Donkey Boy</i></li></ul>"
+        "popup_html": "<b>Bolinas, Marin County, California, United States</b><hr><ul><li><b>Harmony Korine:</b> <i>Aggro Dr1ft, Baby Invasion, Julien Donkey Boy</i></li></ul>",
+        "directors": {
+            "Harmony Korine": [
+                "Aggro Dr1ft",
+                "Baby Invasion",
+                "Julien Donkey Boy"
+            ]
+        }
     },
     {
         "place_name": "宮城県, 日本",
         "lat": 38.3880155,
         "lon": 140.9761025,
-        "popup_html": "<b>宮城県, 日本</b><hr><ul><li><b>Katsuhiro Otomo:</b> <i>Akira</i></li></ul>"
+        "popup_html": "<b>宮城県, 日本</b><hr><ul><li><b>Katsuhiro Otomo:</b> <i>Akira</i></li></ul>",
+        "directors": {
+            "Katsuhiro Otomo": [
+                "Akira"
+            ]
+        }
     },
     {
         "place_name": "South Shields Farm, Cornsay, Durham, County Durham, North East, England, DH7 9EW, United Kingdom",
         "lat": 54.7665236,
         "lon": -1.7998427,
-        "popup_html": "<b>South Shields Farm, Cornsay, Durham, County Durham, North East, England, DH7 9EW, United Kingdom</b><hr><ul><li><b>Ridley Scott:</b> <i>Alien, Alien Covenant, Gladiator, Prometheus, The Martian</i></li></ul>"
+        "popup_html": "<b>South Shields Farm, Cornsay, Durham, County Durham, North East, England, DH7 9EW, United Kingdom</b><hr><ul><li><b>Ridley Scott:</b> <i>Alien, Alien Covenant, Gladiator, Prometheus, The Martian</i></li></ul>",
+        "directors": {
+            "Ridley Scott": [
+                "Alien",
+                "Alien Covenant",
+                "Gladiator",
+                "Prometheus",
+                "The Martian"
+            ]
+        }
     },
     {
         "place_name": "Roanne, Loire, Auvergne-Rhône-Alpes, France métropolitaine, 42300, France",
         "lat": 46.0345572,
         "lon": 4.0729178,
-        "popup_html": "<b>Roanne, Loire, Auvergne-Rhône-Alpes, France métropolitaine, 42300, France</b><hr><ul><li><b>Jean-Pierre Jeunet:</b> <i>Alien Resurrection</i></li></ul>"
+        "popup_html": "<b>Roanne, Loire, Auvergne-Rhône-Alpes, France métropolitaine, 42300, France</b><hr><ul><li><b>Jean-Pierre Jeunet:</b> <i>Alien Resurrection</i></li></ul>",
+        "directors": {
+            "Jean-Pierre Jeunet": [
+                "Alien Resurrection"
+            ]
+        }
     },
     {
         "place_name": "Kapuskasing, Cochrane District, Northeastern Ontario, Ontario, Canada",
         "lat": 49.416667,
         "lon": -82.433333,
-        "popup_html": "<b>Kapuskasing, Cochrane District, Northeastern Ontario, Ontario, Canada</b><hr><ul><li><b>James Cameron:</b> <i>Aliens, Avatar, Titanic</i></li></ul>"
+        "popup_html": "<b>Kapuskasing, Cochrane District, Northeastern Ontario, Ontario, Canada</b><hr><ul><li><b>James Cameron:</b> <i>Aliens, Avatar, Titanic</i></li></ul>",
+        "directors": {
+            "James Cameron": [
+                "Aliens",
+                "Avatar",
+                "Titanic"
+            ]
+        }
     },
     {
         "place_name": "Tucson, Pima County, Arizona, United States",
         "lat": 32.2228765,
         "lon": -110.974847,
-        "popup_html": "<b>Tucson, Pima County, Arizona, United States</b><hr><ul><li><b>Cord Jefferson:</b> <i>American Fiction</i></li><li><b>Kyle Balda:</b> <i>Minions</i></li></ul>"
+        "popup_html": "<b>Tucson, Pima County, Arizona, United States</b><hr><ul><li><b>Cord Jefferson:</b> <i>American Fiction</i></li><li><b>Kyle Balda:</b> <i>Minions</i></li></ul>",
+        "directors": {
+            "Cord Jefferson": [
+                "American Fiction"
+            ],
+            "Kyle Balda": [
+                "Minions"
+            ]
+        }
     },
     {
         "place_name": "München, Bayern, Deutschland",
         "lat": 48.1371079,
         "lon": 11.5753822,
-        "popup_html": "<b>München, Bayern, Deutschland</b><hr><ul><li><b>Michael Haneke:</b> <i>Amour</i></li></ul>"
+        "popup_html": "<b>München, Bayern, Deutschland</b><hr><ul><li><b>Michael Haneke:</b> <i>Amour</i></li></ul>",
+        "directors": {
+            "Michael Haneke": [
+                "Amour"
+            ]
+        }
     },
     {
         "place_name": "Summit, Union County, New Jersey, United States",
         "lat": 40.7182356,
         "lon": -74.3592296,
-        "popup_html": "<b>Summit, Union County, New Jersey, United States</b><hr><ul><li><b>Sean Baker:</b> <i>Anora</i></li></ul>"
+        "popup_html": "<b>Summit, Union County, New Jersey, United States</b><hr><ul><li><b>Sean Baker:</b> <i>Anora</i></li></ul>",
+        "directors": {
+            "Sean Baker": [
+                "Anora"
+            ]
+        }
     },
     {
         "place_name": "Kongens Lyngby, Lyngby-Taarbæk Kommune, Region Hovedstaden, 2800, Danmark",
         "lat": 55.7718649,
         "lon": 12.5051413,
-        "popup_html": "<b>Kongens Lyngby, Lyngby-Taarbæk Kommune, Region Hovedstaden, 2800, Danmark</b><hr><ul><li><b>Lars von Trier:</b> <i>Antichrist, Breaking The Waves, Dancer In The Dark, Dogville, Epidemic, Europa, Manderlay, Melancholia, The Boss Of It All, The Element Of Crime</i></li></ul>"
+        "popup_html": "<b>Kongens Lyngby, Lyngby-Taarbæk Kommune, Region Hovedstaden, 2800, Danmark</b><hr><ul><li><b>Lars von Trier:</b> <i>Antichrist, Breaking The Waves, Dancer In The Dark, Dogville, Epidemic, Europa, Manderlay, Melancholia, The Boss Of It All, The Element Of Crime</i></li></ul>",
+        "directors": {
+            "Lars von Trier": [
+                "Antichrist",
+                "Breaking The Waves",
+                "Dancer In The Dark",
+                "Dogville",
+                "Epidemic",
+                "Europa",
+                "Manderlay",
+                "Melancholia",
+                "The Boss Of It All",
+                "The Element Of Crime"
+            ]
+        }
     },
     {
         "place_name": "汾阳市, 吕梁市, 山西省, 中国",
         "lat": 37.2683004,
         "lon": 111.7830029,
-        "popup_html": "<b>汾阳市, 吕梁市, 山西省, 中国</b><hr><ul><li><b>Jia Zhangke:</b> <i>Ash Is Purest White</i></li></ul>"
+        "popup_html": "<b>汾阳市, 吕梁市, 山西省, 中国</b><hr><ul><li><b>Jia Zhangke:</b> <i>Ash Is Purest White</i></li></ul>",
+        "directors": {
+            "Jia Zhangke": [
+                "Ash Is Purest White"
+            ]
+        }
     },
     {
         "place_name": "Brownsea Island, Studland, Poole, Dorset, England, BH13 7EE, United Kingdom",
         "lat": 50.6917237,
         "lon": -1.9718675,
-        "popup_html": "<b>Brownsea Island, Studland, Poole, Dorset, England, BH13 7EE, United Kingdom</b><hr><ul><li><b>Edgar Wright:</b> <i>Baby Driver, Hot Fuzz, Shaun Of The Dead</i></li></ul>"
+        "popup_html": "<b>Brownsea Island, Studland, Poole, Dorset, England, BH13 7EE, United Kingdom</b><hr><ul><li><b>Edgar Wright:</b> <i>Baby Driver, Hot Fuzz, Shaun Of The Dead</i></li></ul>",
+        "directors": {
+            "Edgar Wright": [
+                "Baby Driver",
+                "Hot Fuzz",
+                "Shaun Of The Dead"
+            ]
+        }
     },
     {
         "place_name": "København, Københavns Kommune, Region Hovedstaden, 1357, Danmark",
         "lat": 55.6867243,
         "lon": 12.5700724,
-        "popup_html": "<b>København, Københavns Kommune, Region Hovedstaden, 1357, Danmark</b><hr><ul><li><b>Susanne Bier:</b> <i>Bird Box</i></li></ul>"
+        "popup_html": "<b>København, Københavns Kommune, Region Hovedstaden, 1357, Danmark</b><hr><ul><li><b>Susanne Bier:</b> <i>Bird Box</i></li></ul>",
+        "directors": {
+            "Susanne Bier": [
+                "Bird Box"
+            ]
+        }
     },
     {
         "place_name": "Atlanta, Fulton County, Georgia, United States",
         "lat": 33.7544657,
         "lon": -84.3898151,
-        "popup_html": "<b>Atlanta, Fulton County, Georgia, United States</b><hr><ul><li><b>Steven Soderbergh:</b> <i>Black Bag, Oceans Eleven, Oceans Twelve</i></li><li><b>Spike Lee:</b> <i>Do The Right Thing, Oldboy</i></li></ul>"
+        "popup_html": "<b>Atlanta, Fulton County, Georgia, United States</b><hr><ul><li><b>Steven Soderbergh:</b> <i>Black Bag, Oceans Eleven, Oceans Twelve</i></li><li><b>Spike Lee:</b> <i>Do The Right Thing, Oldboy</i></li></ul>",
+        "directors": {
+            "Steven Soderbergh": [
+                "Black Bag",
+                "Oceans Eleven",
+                "Oceans Twelve"
+            ],
+            "Spike Lee": [
+                "Do The Right Thing",
+                "Oldboy"
+            ]
+        }
     },
     {
         "place_name": "City of Syracuse, Onondaga County, New York, United States",
         "lat": 43.0481221,
         "lon": -76.1474244,
-        "popup_html": "<b>City of Syracuse, Onondaga County, New York, United States</b><hr><ul><li><b>Glen Morgan:</b> <i>Black Christmas</i></li></ul>"
+        "popup_html": "<b>City of Syracuse, Onondaga County, New York, United States</b><hr><ul><li><b>Glen Morgan:</b> <i>Black Christmas</i></li></ul>",
+        "directors": {
+            "Glen Morgan": [
+                "Black Christmas"
+            ]
+        }
     },
     {
         "place_name": "Minneapolis, Hennepin County, Minnesota, United States",
         "lat": 44.9772995,
         "lon": -93.2654692,
-        "popup_html": "<b>Minneapolis, Hennepin County, Minnesota, United States</b><hr><ul><li><b>Joel Coen:</b> <i>Blood Simple</i></li></ul>"
+        "popup_html": "<b>Minneapolis, Hennepin County, Minnesota, United States</b><hr><ul><li><b>Joel Coen:</b> <i>Blood Simple</i></li></ul>",
+        "directors": {
+            "Joel Coen": [
+                "Blood Simple"
+            ]
+        }
     },
     {
         "place_name": "City of Peekskill, Westchester County, New York, 10566, United States",
         "lat": 41.289811,
         "lon": -73.9204922,
-        "popup_html": "<b>City of Peekskill, Westchester County, New York, 10566, United States</b><hr><ul><li><b>Mel Gibson:</b> <i>Braveheart</i></li></ul>"
+        "popup_html": "<b>City of Peekskill, Westchester County, New York, 10566, United States</b><hr><ul><li><b>Mel Gibson:</b> <i>Braveheart</i></li></ul>",
+        "directors": {
+            "Mel Gibson": [
+                "Braveheart"
+            ]
+        }
     },
     {
         "place_name": "Paris, France métropolitaine, France",
         "lat": 48.8588897,
         "lon": 2.320041,
-        "popup_html": "<b>Paris, France métropolitaine, France</b><hr><ul><li><b>Lina Soualem:</b> <i>Bye Bye Tiberias</i></li><li><b>Jacques Audiard:</b> <i>Emilia Perez</i></li><li><b>Jean-Luc Godard:</b> <i>Hail Sarajevo</i></li><li><b>Mathieu Kassovitz:</b> <i>La Haine</i></li><li><b>Luc Besson:</b> <i>Leon The Professional, Lucy, The Fifth Element</i></li><li><b>Louis Leterrier:</b> <i>Now You See Me</i></li><li><b>Coralie Fargeat:</b> <i>The Substance</i></li><li><b>Julia Ducournau:</b> <i>Titane</i></li></ul>"
+        "popup_html": "<b>Paris, France métropolitaine, France</b><hr><ul><li><b>Lina Soualem:</b> <i>Bye Bye Tiberias</i></li><li><b>Jacques Audiard:</b> <i>Emilia Perez</i></li><li><b>Jean-Luc Godard:</b> <i>Hail Sarajevo</i></li><li><b>Mathieu Kassovitz:</b> <i>La Haine</i></li><li><b>Luc Besson:</b> <i>Leon The Professional, Lucy, The Fifth Element</i></li><li><b>Louis Leterrier:</b> <i>Now You See Me</i></li><li><b>Coralie Fargeat:</b> <i>The Substance</i></li><li><b>Julia Ducournau:</b> <i>Titane</i></li></ul>",
+        "directors": {
+            "Lina Soualem": [
+                "Bye Bye Tiberias"
+            ],
+            "Jacques Audiard": [
+                "Emilia Perez"
+            ],
+            "Jean-Luc Godard": [
+                "Hail Sarajevo"
+            ],
+            "Mathieu Kassovitz": [
+                "La Haine"
+            ],
+            "Luc Besson": [
+                "Leon The Professional",
+                "Lucy",
+                "The Fifth Element"
+            ],
+            "Louis Leterrier": [
+                "Now You See Me"
+            ],
+            "Coralie Fargeat": [
+                "The Substance"
+            ],
+            "Julia Ducournau": [
+                "Titane"
+            ]
+        }
     },
     {
         "place_name": "Toronto, Golden Horseshoe, Ontario, Canada",
         "lat": 43.6534817,
         "lon": -79.3839347,
-        "popup_html": "<b>Toronto, Golden Horseshoe, Ontario, Canada</b><hr><ul><li><b>David Cronenberg:</b> <i>Camera, Crash, The Fly</i></li></ul>"
+        "popup_html": "<b>Toronto, Golden Horseshoe, Ontario, Canada</b><hr><ul><li><b>David Cronenberg:</b> <i>Camera, Crash, The Fly</i></li></ul>",
+        "directors": {
+            "David Cronenberg": [
+                "Camera",
+                "Crash",
+                "The Fly"
+            ]
+        }
     },
     {
         "place_name": "Newark, Essex County, New Jersey, United States",
         "lat": 40.735657,
         "lon": -74.1723667,
-        "popup_html": "<b>Newark, Essex County, New Jersey, United States</b><hr><ul><li><b>Brian De Palma:</b> <i>Carrie, Mission Impossible, Phantom Of The Paradise, Scarface</i></li></ul>"
+        "popup_html": "<b>Newark, Essex County, New Jersey, United States</b><hr><ul><li><b>Brian De Palma:</b> <i>Carrie, Mission Impossible, Phantom Of The Paradise, Scarface</i></li></ul>",
+        "directors": {
+            "Brian De Palma": [
+                "Carrie",
+                "Mission Impossible",
+                "Phantom Of The Paradise",
+                "Scarface"
+            ]
+        }
     },
     {
         "place_name": "Hastings, Hastings District, Hawke's Bay, 4122, New Zealand / Aotearoa",
         "lat": -39.6417678,
         "lon": 176.8430781,
-        "popup_html": "<b>Hastings, Hastings District, Hawke's Bay, 4122, New Zealand / Aotearoa</b><hr><ul><li><b>Martin Campbell:</b> <i>Casino Royale</i></li></ul>"
+        "popup_html": "<b>Hastings, Hastings District, Hawke's Bay, 4122, New Zealand / Aotearoa</b><hr><ul><li><b>Martin Campbell:</b> <i>Casino Royale</i></li></ul>",
+        "directors": {
+            "Martin Campbell": [
+                "Casino Royale"
+            ]
+        }
     },
     {
         "place_name": "Burbank, Los Angeles County, California, United States",
         "lat": 34.1812089,
         "lon": -118.307201,
-        "popup_html": "<b>Burbank, Los Angeles County, California, United States</b><hr><ul><li><b>Tim Burton:</b> <i>Charlie And The Chocolate Factory, Edward Scissorhands</i></li></ul>"
+        "popup_html": "<b>Burbank, Los Angeles County, California, United States</b><hr><ul><li><b>Tim Burton:</b> <i>Charlie And The Chocolate Factory, Edward Scissorhands</i></li></ul>",
+        "directors": {
+            "Tim Burton": [
+                "Charlie And The Chocolate Factory",
+                "Edward Scissorhands"
+            ]
+        }
     },
     {
         "place_name": "Ciudad de México, México",
         "lat": 19.3207722,
         "lon": -99.1514678,
-        "popup_html": "<b>Ciudad de México, México</b><hr><ul><li><b>Alfonso Cuarón:</b> <i>Children Of Men, Gravity</i></li></ul>"
+        "popup_html": "<b>Ciudad de México, México</b><hr><ul><li><b>Alfonso Cuarón:</b> <i>Children Of Men, Gravity</i></li></ul>",
+        "directors": {
+            "Alfonso Cuarón": [
+                "Children Of Men",
+                "Gravity"
+            ]
+        }
     },
     {
         "place_name": "São Paulo, Região Imediata de São Paulo, Região Metropolitana de São Paulo, Região Geográfica Intermediária de São Paulo, São Paulo, Região Sudeste, Brasil",
         "lat": -23.5506507,
         "lon": -46.6333824,
-        "popup_html": "<b>São Paulo, Região Imediata de São Paulo, Região Metropolitana de São Paulo, Região Geográfica Intermediária de São Paulo, São Paulo, Região Sudeste, Brasil</b><hr><ul><li><b>Fernando Meirelles:</b> <i>City Of God</i></li></ul>"
+        "popup_html": "<b>São Paulo, Região Imediata de São Paulo, Região Metropolitana de São Paulo, Região Geográfica Intermediária de São Paulo, São Paulo, Região Sudeste, Brasil</b><hr><ul><li><b>Fernando Meirelles:</b> <i>City Of God</i></li></ul>",
+        "directors": {
+            "Fernando Meirelles": [
+                "City Of God"
+            ]
+        }
     },
     {
         "place_name": "Buenos Aires, Comuna 6, Ciudad Autónoma de Buenos Aires, Argentina",
         "lat": -34.6083696,
         "lon": -58.4440583,
-        "popup_html": "<b>Buenos Aires, Comuna 6, Ciudad Autónoma de Buenos Aires, Argentina</b><hr><ul><li><b>Gaspar Noé:</b> <i>Climax, Love</i></li><li><b>Fabián Bielinsky:</b> <i>Nine Queens</i></li><li><b>Martín Rejtman:</b> <i>Silvia Prieto, The Magic Gloves</i></li><li><b>Rodrigo Moreno:</b> <i>The Delinquents</i></li></ul>"
+        "popup_html": "<b>Buenos Aires, Comuna 6, Ciudad Autónoma de Buenos Aires, Argentina</b><hr><ul><li><b>Gaspar Noé:</b> <i>Climax, Love</i></li><li><b>Fabián Bielinsky:</b> <i>Nine Queens</i></li><li><b>Martín Rejtman:</b> <i>Silvia Prieto, The Magic Gloves</i></li><li><b>Rodrigo Moreno:</b> <i>The Delinquents</i></li></ul>",
+        "directors": {
+            "Gaspar Noé": [
+                "Climax",
+                "Love"
+            ],
+            "Fabián Bielinsky": [
+                "Nine Queens"
+            ],
+            "Martín Rejtman": [
+                "Silvia Prieto",
+                "The Magic Gloves"
+            ],
+            "Rodrigo Moreno": [
+                "The Delinquents"
+            ]
+        }
     },
     {
         "place_name": "United States",
         "lat": 39.7837304,
         "lon": -100.445882,
-        "popup_html": "<b>United States</b><hr><ul><li><b>James Ward Byrkit:</b> <i>Coherence</i></li><li><b>Wes Ball:</b> <i>The Maze Runner</i></li></ul>"
+        "popup_html": "<b>United States</b><hr><ul><li><b>James Ward Byrkit:</b> <i>Coherence</i></li><li><b>Wes Ball:</b> <i>The Maze Runner</i></li></ul>",
+        "directors": {
+            "James Ward Byrkit": [
+                "Coherence"
+            ],
+            "Wes Ball": [
+                "The Maze Runner"
+            ]
+        }
     },
     {
         "place_name": "Chicago, Cook County, Illinois, United States",
         "lat": 41.8755616,
         "lon": -87.6244212,
-        "popup_html": "<b>Chicago, Cook County, Illinois, United States</b><hr><ul><li><b>Michael Mann:</b> <i>Collateral, Heat, Thief</i></li><li><b>Conner O'Malley:</b> <i>Rap World</i></li><li><b>William Friedkin:</b> <i>The Exorcist, To Live And Die In La</i></li><li><b>Lana Wachowski:</b> <i>The Matrix, The Matrix Resurrections, The Matrix Revolutions</i></li></ul>"
+        "popup_html": "<b>Chicago, Cook County, Illinois, United States</b><hr><ul><li><b>Michael Mann:</b> <i>Collateral, Heat, Thief</i></li><li><b>Conner O'Malley:</b> <i>Rap World</i></li><li><b>William Friedkin:</b> <i>The Exorcist, To Live And Die In La</i></li><li><b>Lana Wachowski:</b> <i>The Matrix, The Matrix Resurrections, The Matrix Revolutions</i></li></ul>",
+        "directors": {
+            "Michael Mann": [
+                "Collateral",
+                "Heat",
+                "Thief"
+            ],
+            "Conner O'Malley": [
+                "Rap World"
+            ],
+            "William Friedkin": [
+                "The Exorcist",
+                "To Live And Die In La"
+            ],
+            "Lana Wachowski": [
+                "The Matrix",
+                "The Matrix Resurrections",
+                "The Matrix Revolutions"
+            ]
+        }
     },
     {
         "place_name": "Stockholm, Stockholms kommun, Stockholms län, 111 29, Sverige",
         "lat": 59.3251172,
         "lon": 18.0710935,
-        "popup_html": "<b>Stockholm, Stockholms kommun, Stockholms län, 111 29, Sverige</b><hr><ul><li><b>Göran Olsson:</b> <i>Concerning Violence</i></li></ul>"
+        "popup_html": "<b>Stockholm, Stockholms kommun, Stockholms län, 111 29, Sverige</b><hr><ul><li><b>Göran Olsson:</b> <i>Concerning Violence</i></li></ul>",
+        "directors": {
+            "Göran Olsson": [
+                "Concerning Violence"
+            ]
+        }
     },
     {
         "place_name": "Sydney, Council of the City of Sydney, New South Wales, Australia",
         "lat": -33.8698439,
         "lon": 151.2082848,
-        "popup_html": "<b>Sydney, Council of the City of Sydney, New South Wales, Australia</b><hr><ul><li><b>Peter Weir:</b> <i>Dead Poets Society</i></li><li><b>James McTeigue:</b> <i>V For Vendetta</i></li></ul>"
+        "popup_html": "<b>Sydney, Council of the City of Sydney, New South Wales, Australia</b><hr><ul><li><b>Peter Weir:</b> <i>Dead Poets Society</i></li><li><b>James McTeigue:</b> <i>V For Vendetta</i></li></ul>",
+        "directors": {
+            "Peter Weir": [
+                "Dead Poets Society"
+            ],
+            "James McTeigue": [
+                "V For Vendetta"
+            ]
+        }
     },
     {
         "place_name": "東京都, 日本",
         "lat": 35.6768601,
         "lon": 139.7638947,
-        "popup_html": "<b>東京都, 日本</b><hr><ul><li><b>Shusuke Kaneko:</b> <i>Death Note</i></li><li><b>Tetsuo Shinohara:</b> <i>I Am Love</i></li><li><b>Hayao Miyazaki:</b> <i>My Neighbor Totoro, Princess Mononoke, Spirited Away</i></li></ul>"
+        "popup_html": "<b>東京都, 日本</b><hr><ul><li><b>Shusuke Kaneko:</b> <i>Death Note</i></li><li><b>Tetsuo Shinohara:</b> <i>I Am Love</i></li><li><b>Hayao Miyazaki:</b> <i>My Neighbor Totoro, Princess Mononoke, Spirited Away</i></li></ul>",
+        "directors": {
+            "Shusuke Kaneko": [
+                "Death Note"
+            ],
+            "Tetsuo Shinohara": [
+                "I Am Love"
+            ],
+            "Hayao Miyazaki": [
+                "My Neighbor Totoro",
+                "Princess Mononoke",
+                "Spirited Away"
+            ]
+        }
     },
     {
         "place_name": "Johannesburg, City of Johannesburg Metropolitan Municipality, Gauteng, 2001, South Africa",
         "lat": -26.205,
         "lon": 28.049722,
-        "popup_html": "<b>Johannesburg, City of Johannesburg Metropolitan Municipality, Gauteng, 2001, South Africa</b><hr><ul><li><b>Neill Blomkamp:</b> <i>District 9</i></li></ul>"
+        "popup_html": "<b>Johannesburg, City of Johannesburg Metropolitan Municipality, Gauteng, 2001, South Africa</b><hr><ul><li><b>Neill Blomkamp:</b> <i>District 9</i></li></ul>",
+        "directors": {
+            "Neill Blomkamp": [
+                "District 9"
+            ]
+        }
     },
     {
         "place_name": "Greenwich, Railroad Avenue, Greenwich, Western Connecticut Planning Region, 06830, United States",
         "lat": 41.021446,
         "lon": -73.625634,
-        "popup_html": "<b>Greenwich, Railroad Avenue, Greenwich, Western Connecticut Planning Region, 06830, United States</b><hr><ul><li><b>Neil Burger:</b> <i>Divergent</i></li></ul>"
+        "popup_html": "<b>Greenwich, Railroad Avenue, Greenwich, Western Connecticut Planning Region, 06830, United States</b><hr><ul><li><b>Neil Burger:</b> <i>Divergent</i></li></ul>",
+        "directors": {
+            "Neil Burger": [
+                "Divergent"
+            ]
+        }
     },
     {
         "place_name": "Newport News, Virginia, United States",
         "lat": 36.9775016,
         "lon": -76.42977,
-        "popup_html": "<b>Newport News, Virginia, United States</b><hr><ul><li><b>Richard Kelly:</b> <i>Donnie Darko</i></li></ul>"
+        "popup_html": "<b>Newport News, Virginia, United States</b><hr><ul><li><b>Richard Kelly:</b> <i>Donnie Darko</i></li></ul>",
+        "directors": {
+            "Richard Kelly": [
+                "Donnie Darko"
+            ]
+        }
     },
     {
         "place_name": "Cincinnati, Hamilton County, Ohio, United States",
         "lat": 39.1014537,
         "lon": -84.5124602,
-        "popup_html": "<b>Cincinnati, Hamilton County, Ohio, United States</b><hr><ul><li><b>Steven Spielberg:</b> <i>Et The Extra Terrestrial, Jaws, Schindlers List, The Terminal</i></li></ul>"
+        "popup_html": "<b>Cincinnati, Hamilton County, Ohio, United States</b><hr><ul><li><b>Steven Spielberg:</b> <i>Et The Extra Terrestrial, Jaws, Schindlers List, The Terminal</i></li></ul>",
+        "directors": {
+            "Steven Spielberg": [
+                "Et The Extra Terrestrial",
+                "Jaws",
+                "Schindlers List",
+                "The Terminal"
+            ]
+        }
     },
     {
         "place_name": "Birmingham, Jefferson County, Alabama, United States",
         "lat": 33.5206824,
         "lon": -86.8024326,
-        "popup_html": "<b>Birmingham, Jefferson County, Alabama, United States</b><hr><ul><li><b>Daniel Scheinert:</b> <i>Everything Everywhere All At Once</i></li></ul>"
+        "popup_html": "<b>Birmingham, Jefferson County, Alabama, United States</b><hr><ul><li><b>Daniel Scheinert:</b> <i>Everything Everywhere All At Once</i></li></ul>",
+        "directors": {
+            "Daniel Scheinert": [
+                "Everything Everywhere All At Once"
+            ]
+        }
     },
     {
         "place_name": "神戸市, 兵庫県, 日本",
         "lat": 34.6932379,
         "lon": 135.1943764,
-        "popup_html": "<b>神戸市, 兵庫県, 日本</b><hr><ul><li><b>Kiyoshi Kurosawa:</b> <i>Eyes Of The Spider, License To Live, Pulse, Serpents Path, Tokyo Sonata</i></li></ul>"
+        "popup_html": "<b>神戸市, 兵庫県, 日本</b><hr><ul><li><b>Kiyoshi Kurosawa:</b> <i>Eyes Of The Spider, License To Live, Pulse, Serpents Path, Tokyo Sonata</i></li></ul>",
+        "directors": {
+            "Kiyoshi Kurosawa": [
+                "Eyes Of The Spider",
+                "License To Live",
+                "Pulse",
+                "Serpents Path",
+                "Tokyo Sonata"
+            ]
+        }
     },
     {
         "place_name": "North Carolina, United States",
         "lat": 35.6729639,
         "lon": -79.0392919,
-        "popup_html": "<b>North Carolina, United States</b><hr><ul><li><b>Ramin Bahrani:</b> <i>Fahrenheit 451</i></li></ul>"
+        "popup_html": "<b>North Carolina, United States</b><hr><ul><li><b>Ramin Bahrani:</b> <i>Fahrenheit 451</i></li></ul>",
+        "directors": {
+            "Ramin Bahrani": [
+                "Fahrenheit 451"
+            ]
+        }
     },
     {
         "place_name": "Orimattila, Lahden seutukunta, Päijät-Häme, Manner-Suomi, Suomi / Finland",
         "lat": 60.805137,
         "lon": 25.7333558,
-        "popup_html": "<b>Orimattila, Lahden seutukunta, Päijät-Häme, Manner-Suomi, Suomi / Finland</b><hr><ul><li><b>Aki Kaurismäki:</b> <i>Fallen Leaves</i></li></ul>"
+        "popup_html": "<b>Orimattila, Lahden seutukunta, Päijät-Häme, Manner-Suomi, Suomi / Finland</b><hr><ul><li><b>Aki Kaurismäki:</b> <i>Fallen Leaves</i></li></ul>",
+        "directors": {
+            "Aki Kaurismäki": [
+                "Fallen Leaves"
+            ]
+        }
     },
     {
         "place_name": "神奈川県, 日本",
         "lat": 35.4342935,
         "lon": 139.374753,
-        "popup_html": "<b>神奈川県, 日本</b><hr><ul><li><b>Tomonori Sudo:</b> <i>Fate, Fate Stay Night Heavens Feel I Presage Flower, Fate Stay Night Heavens Feel Ii Lost Butterfly, Fate Stay Night Heavens Feel Iii Spring Song</i></li></ul>"
+        "popup_html": "<b>神奈川県, 日本</b><hr><ul><li><b>Tomonori Sudo:</b> <i>Fate, Fate Stay Night Heavens Feel I Presage Flower, Fate Stay Night Heavens Feel Ii Lost Butterfly, Fate Stay Night Heavens Feel Iii Spring Song</i></li></ul>",
+        "directors": {
+            "Tomonori Sudo": [
+                "Fate",
+                "Fate Stay Night Heavens Feel I Presage Flower",
+                "Fate Stay Night Heavens Feel Ii Lost Butterfly",
+                "Fate Stay Night Heavens Feel Iii Spring Song"
+            ]
+        }
     },
     {
         "place_name": "Miami, Miami-Dade County, Florida, United States",
         "lat": 25.7741728,
         "lon": -80.19362,
-        "popup_html": "<b>Miami, Miami-Dade County, Florida, United States</b><hr><ul><li><b>Kelly Reichardt:</b> <i>First Cow, River Of Grass</i></li></ul>"
+        "popup_html": "<b>Miami, Miami-Dade County, Florida, United States</b><hr><ul><li><b>Kelly Reichardt:</b> <i>First Cow, River Of Grass</i></li></ul>",
+        "directors": {
+            "Kelly Reichardt": [
+                "First Cow",
+                "River Of Grass"
+            ]
+        }
     },
     {
         "place_name": "Grand Rapids, Kent County, Michigan, United States",
         "lat": 42.9632425,
         "lon": -85.6678639,
-        "popup_html": "<b>Grand Rapids, Kent County, Michigan, United States</b><hr><ul><li><b>Paul Schrader:</b> <i>First Reformed</i></li></ul>"
+        "popup_html": "<b>Grand Rapids, Kent County, Michigan, United States</b><hr><ul><li><b>Paul Schrader:</b> <i>First Reformed</i></li></ul>",
+        "directors": {
+            "Paul Schrader": [
+                "First Reformed"
+            ]
+        }
     },
     {
         "place_name": "City of New York, New York, United States",
         "lat": 40.7127281,
         "lon": -74.0060152,
-        "popup_html": "<b>City of New York, New York, United States</b><hr><ul><li><b>James Mangold:</b> <i>Ford V Ferrari</i></li><li><b>Will Gluck:</b> <i>Friends With Benefits</i></li><li><b>Jordan Peele:</b> <i>Get Out</i></li><li><b>Josh Safdie:</b> <i>Good Time</i></li><li><b>Zoë Lund:</b> <i>Hot Ticket</i></li><li><b>John Cassavetes:</b> <i>Husbands</i></li><li><b>John Hamburg:</b> <i>I Love You Man</i></li><li><b>Osgood Perkins:</b> <i>Longlegs</i></li><li><b>Sofia Coppola:</b> <i>Lost In Translation</i></li><li><b>J.J. Abrams:</b> <i>Mission Impossible Iii</i></li><li><b>Bennett Miller:</b> <i>Moneyball</i></li><li><b>Robert Eggers:</b> <i>Nosferatu</i></li></ul>"
+        "popup_html": "<b>City of New York, New York, United States</b><hr><ul><li><b>James Mangold:</b> <i>Ford V Ferrari</i></li><li><b>Will Gluck:</b> <i>Friends With Benefits</i></li><li><b>Jordan Peele:</b> <i>Get Out</i></li><li><b>Josh Safdie:</b> <i>Good Time</i></li><li><b>Zoë Lund:</b> <i>Hot Ticket</i></li><li><b>John Cassavetes:</b> <i>Husbands</i></li><li><b>John Hamburg:</b> <i>I Love You Man</i></li><li><b>Osgood Perkins:</b> <i>Longlegs</i></li><li><b>Sofia Coppola:</b> <i>Lost In Translation</i></li><li><b>J.J. Abrams:</b> <i>Mission Impossible Iii</i></li><li><b>Bennett Miller:</b> <i>Moneyball</i></li><li><b>Robert Eggers:</b> <i>Nosferatu</i></li></ul>",
+        "directors": {
+            "James Mangold": [
+                "Ford V Ferrari"
+            ],
+            "Will Gluck": [
+                "Friends With Benefits"
+            ],
+            "Jordan Peele": [
+                "Get Out"
+            ],
+            "Josh Safdie": [
+                "Good Time"
+            ],
+            "Zoë Lund": [
+                "Hot Ticket"
+            ],
+            "John Cassavetes": [
+                "Husbands"
+            ],
+            "John Hamburg": [
+                "I Love You Man"
+            ],
+            "Osgood Perkins": [
+                "Longlegs"
+            ],
+            "Sofia Coppola": [
+                "Lost In Translation"
+            ],
+            "J.J. Abrams": [
+                "Mission Impossible Iii"
+            ],
+            "Bennett Miller": [
+                "Moneyball"
+            ],
+            "Robert Eggers": [
+                "Nosferatu"
+            ]
+        }
     },
     {
         "place_name": "Brooklyn, Kings County, City of New York, New York, United States",
         "lat": 40.6526006,
         "lon": -73.9497211,
-        "popup_html": "<b>Brooklyn, Kings County, City of New York, New York, United States</b><hr><ul><li><b>Noah Baumbach:</b> <i>Frances Ha</i></li><li><b>Kemp Powers:</b> <i>Spider Man Across The Spider Verse</i></li><li><b>Todd Phillips:</b> <i>The Hangover, The Hangover Part Ii</i></li></ul>"
+        "popup_html": "<b>Brooklyn, Kings County, City of New York, New York, United States</b><hr><ul><li><b>Noah Baumbach:</b> <i>Frances Ha</i></li><li><b>Kemp Powers:</b> <i>Spider Man Across The Spider Verse</i></li><li><b>Todd Phillips:</b> <i>The Hangover, The Hangover Part Ii</i></li></ul>",
+        "directors": {
+            "Noah Baumbach": [
+                "Frances Ha"
+            ],
+            "Kemp Powers": [
+                "Spider Man Across The Spider Verse"
+            ],
+            "Todd Phillips": [
+                "The Hangover",
+                "The Hangover Part Ii"
+            ]
+        }
     },
     {
         "place_name": "Paraparaumu, Kāpiti Coast District, Wellington, 5032, New Zealand / Aotearoa",
         "lat": -40.9144636,
         "lon": 175.0061963,
-        "popup_html": "<b>Paraparaumu, Kāpiti Coast District, Wellington, 5032, New Zealand / Aotearoa</b><hr><ul><li><b>Andrew Niccol:</b> <i>Gattaca</i></li></ul>"
+        "popup_html": "<b>Paraparaumu, Kāpiti Coast District, Wellington, 5032, New Zealand / Aotearoa</b><hr><ul><li><b>Andrew Niccol:</b> <i>Gattaca</i></li></ul>",
+        "directors": {
+            "Andrew Niccol": [
+                "Gattaca"
+            ]
+        }
     },
     {
         "place_name": "Westminster, Millbank, City of Westminster, Greater London, England, SW1P 3JX, United Kingdom",
         "lat": 51.5004439,
         "lon": -0.1265398,
-        "popup_html": "<b>Westminster, Millbank, City of Westminster, Greater London, England, SW1P 3JX, United Kingdom</b><hr><ul><li><b>Rupert Sanders:</b> <i>Ghost In The Shell, Ghost In The Shell</i></li><li><b>Christopher Nolan:</b> <i>Inception, Interstellar, Tenet, The Prestige</i></li></ul>"
+        "popup_html": "<b>Westminster, Millbank, City of Westminster, Greater London, England, SW1P 3JX, United Kingdom</b><hr><ul><li><b>Rupert Sanders:</b> <i>Ghost In The Shell, Ghost In The Shell</i></li><li><b>Christopher Nolan:</b> <i>Inception, Interstellar, Tenet, The Prestige</i></li></ul>",
+        "directors": {
+            "Rupert Sanders": [
+                "Ghost In The Shell",
+                "Ghost In The Shell"
+            ],
+            "Christopher Nolan": [
+                "Inception",
+                "Interstellar",
+                "Tenet",
+                "The Prestige"
+            ]
+        }
     },
     {
         "place_name": "Hastings, Dakota County, Minnesota, 55033, United States",
         "lat": 44.7426933,
         "lon": -92.8518697,
-        "popup_html": "<b>Hastings, Dakota County, Minnesota, 55033, United States</b><hr><ul><li><b>Mark Steven Johnson:</b> <i>Ghost Rider</i></li></ul>"
+        "popup_html": "<b>Hastings, Dakota County, Minnesota, 55033, United States</b><hr><ul><li><b>Mark Steven Johnson:</b> <i>Ghost Rider</i></li></ul>",
+        "directors": {
+            "Mark Steven Johnson": [
+                "Ghost Rider"
+            ]
+        }
     },
     {
         "place_name": "Soyland Town, Ripponden, Calderdale, West Yorkshire, England, HX6 4NZ, United Kingdom",
         "lat": 53.6820714,
         "lon": -1.9444845,
-        "popup_html": "<b>Soyland Town, Ripponden, Calderdale, West Yorkshire, England, HX6 4NZ, United Kingdom</b><hr><ul><li><b>Francis Lee:</b> <i>Gods Own Country</i></li></ul>"
+        "popup_html": "<b>Soyland Town, Ripponden, Calderdale, West Yorkshire, England, HX6 4NZ, United Kingdom</b><hr><ul><li><b>Francis Lee:</b> <i>Gods Own Country</i></li></ul>",
+        "directors": {
+            "Francis Lee": [
+                "Gods Own Country"
+            ]
+        }
     },
     {
         "place_name": "Philadelphia, Philadelphia County, Pennsylvania, United States",
         "lat": 39.9527237,
         "lon": -75.1635262,
-        "popup_html": "<b>Philadelphia, Philadelphia County, Pennsylvania, United States</b><hr><ul><li><b>Randal Kleiser:</b> <i>Grease</i></li></ul>"
+        "popup_html": "<b>Philadelphia, Philadelphia County, Pennsylvania, United States</b><hr><ul><li><b>Randal Kleiser:</b> <i>Grease</i></li></ul>",
+        "directors": {
+            "Randal Kleiser": [
+                "Grease"
+            ]
+        }
     },
     {
         "place_name": "立川市, 東京都, 日本",
         "lat": 35.7139057,
         "lon": 139.4077701,
-        "popup_html": "<b>立川市, 東京都, 日本</b><hr><ul><li><b>Kiyoshi Nishimura:</b> <i>Hairpin Circus</i></li></ul>"
+        "popup_html": "<b>立川市, 東京都, 日本</b><hr><ul><li><b>Kiyoshi Nishimura:</b> <i>Hairpin Circus</i></li></ul>",
+        "directors": {
+            "Kiyoshi Nishimura": [
+                "Hairpin Circus"
+            ]
+        }
     },
     {
         "place_name": "Vannes, Morbihan, Bretagne, France métropolitaine, 56000, France",
         "lat": 47.6586772,
         "lon": -2.7599079,
-        "popup_html": "<b>Vannes, Morbihan, Bretagne, France métropolitaine, 56000, France</b><hr><ul><li><b>Alain Resnais:</b> <i>Hiroshima Mon Amour, Muriel Or The Time Of Return</i></li></ul>"
+        "popup_html": "<b>Vannes, Morbihan, Bretagne, France métropolitaine, 56000, France</b><hr><ul><li><b>Alain Resnais:</b> <i>Hiroshima Mon Amour, Muriel Or The Time Of Return</i></li></ul>",
+        "directors": {
+            "Alain Resnais": [
+                "Hiroshima Mon Amour",
+                "Muriel Or The Time Of Return"
+            ]
+        }
     },
     {
         "place_name": "Prishtinë, Komuna e Prishtinës / Opština Priština, Rajoni i Prishtinës / Prištinski okrug, Kosova / Kosovo",
         "lat": 42.6638771,
         "lon": 21.1640849,
-        "popup_html": "<b>Prishtinë, Komuna e Prishtinës / Opština Priština, Rajoni i Prishtinës / Prištinski okrug, Kosova / Kosovo</b><hr><ul><li><b>Blerta Basholli:</b> <i>Hive</i></li></ul>"
+        "popup_html": "<b>Prishtinë, Komuna e Prishtinës / Opština Priština, Rajoni i Prishtinës / Prištinski okrug, Kosova / Kosovo</b><hr><ul><li><b>Blerta Basholli:</b> <i>Hive</i></li></ul>",
+        "directors": {
+            "Blerta Basholli": [
+                "Hive"
+            ]
+        }
     },
     {
         "place_name": "Figueira da Foz, Coimbra, Portugal",
         "lat": 40.1485808,
         "lon": -8.855655,
-        "popup_html": "<b>Figueira da Foz, Coimbra, Portugal</b><hr><ul><li><b>João César Monteiro:</b> <i>Hovering Over The Water</i></li></ul>"
+        "popup_html": "<b>Figueira da Foz, Coimbra, Portugal</b><hr><ul><li><b>João César Monteiro:</b> <i>Hovering Over The Water</i></li></ul>",
+        "directors": {
+            "João César Monteiro": [
+                "Hovering Over The Water"
+            ]
+        }
     },
     {
         "place_name": "Arrondissement de Port-au-Prince, Département de l'Ouest, Ayiti",
         "lat": 18.547327,
         "lon": -72.3395928,
-        "popup_html": "<b>Arrondissement de Port-au-Prince, Département de l'Ouest, Ayiti</b><hr><ul><li><b>Raoul Peck:</b> <i>I Am Not Your Negro, Profit Nothing But Or Impolite Thoughts On The Class Struggle</i></li></ul>"
+        "popup_html": "<b>Arrondissement de Port-au-Prince, Département de l'Ouest, Ayiti</b><hr><ul><li><b>Raoul Peck:</b> <i>I Am Not Your Negro, Profit Nothing But Or Impolite Thoughts On The Class Struggle</i></li></ul>",
+        "directors": {
+            "Raoul Peck": [
+                "I Am Not Your Negro",
+                "Profit Nothing But Or Impolite Thoughts On The Class Struggle"
+            ]
+        }
     },
     {
         "place_name": "Boulogne-Billancourt, Hauts-de-Seine, France métropolitaine, 92100, France",
         "lat": 48.8356649,
         "lon": 2.240206,
-        "popup_html": "<b>Boulogne-Billancourt, Hauts-de-Seine, France métropolitaine, 92100, France</b><hr><ul><li><b>Philippe Garrel:</b> <i>I Can No Longer Hear The Guitar</i></li></ul>"
+        "popup_html": "<b>Boulogne-Billancourt, Hauts-de-Seine, France métropolitaine, 92100, France</b><hr><ul><li><b>Philippe Garrel:</b> <i>I Can No Longer Hear The Guitar</i></li></ul>",
+        "directors": {
+            "Philippe Garrel": [
+                "I Can No Longer Hear The Guitar"
+            ]
+        }
     },
     {
         "place_name": "Paris, Île-de-France, France métropolitaine, France",
         "lat": 48.8534951,
         "lon": 2.3483915,
-        "popup_html": "<b>Paris, Île-de-France, France métropolitaine, France</b><hr><ul><li><b>Jérémy Clapin:</b> <i>I Lost My Body, Meanwhile On Earth</i></li></ul>"
+        "popup_html": "<b>Paris, Île-de-France, France métropolitaine, France</b><hr><ul><li><b>Jérémy Clapin:</b> <i>I Lost My Body, Meanwhile On Earth</i></li></ul>",
+        "directors": {
+            "Jérémy Clapin": [
+                "I Lost My Body",
+                "Meanwhile On Earth"
+            ]
+        }
     },
     {
         "place_name": "الإسكندرية, 21519, مصر",
         "lat": 31.1991806,
         "lon": 29.8951716,
-        "popup_html": "<b>الإسكندرية, 21519, مصر</b><hr><ul><li><b>Alex Proyas:</b> <i>I Robot</i></li></ul>"
+        "popup_html": "<b>الإسكندرية, 21519, مصر</b><hr><ul><li><b>Alex Proyas:</b> <i>I Robot</i></li></ul>",
+        "directors": {
+            "Alex Proyas": [
+                "I Robot"
+            ]
+        }
     },
     {
         "place_name": "Washington, District of Columbia, United States",
         "lat": 38.8950368,
         "lon": -77.0365427,
-        "popup_html": "<b>Washington, District of Columbia, United States</b><hr><ul><li><b>Deborah Stratman:</b> <i>In Order Not To Be Here</i></li></ul>"
+        "popup_html": "<b>Washington, District of Columbia, United States</b><hr><ul><li><b>Deborah Stratman:</b> <i>In Order Not To Be Here</i></li></ul>",
+        "directors": {
+            "Deborah Stratman": [
+                "In Order Not To Be Here"
+            ]
+        }
     },
     {
         "place_name": "上海市, 中国",
         "lat": 31.2312707,
         "lon": 121.4700152,
-        "popup_html": "<b>上海市, 中国</b><hr><ul><li><b>Wong Kar-wai:</b> <i>In The Mood For Love</i></li></ul>"
+        "popup_html": "<b>上海市, 中国</b><hr><ul><li><b>Wong Kar-wai:</b> <i>In The Mood For Love</i></li><li><b>Lou Ye:</b> <i>Suzhou River</i></li></ul>",
+        "directors": {
+            "Wong Kar-wai": [
+                "In The Mood For Love"
+            ],
+            "Lou Ye": [
+                "Suzhou River"
+            ]
+        }
     },
     {
         "place_name": "Arbeitsgericht Stuttgart, 86, Johannesstraße, Rosenberg, Stuttgart-West, Stuttgart, Baden-Württemberg, 70176, Deutschland",
         "lat": 48.7809613,
         "lon": 9.1590569,
-        "popup_html": "<b>Arbeitsgericht Stuttgart, 86, Johannesstraße, Rosenberg, Stuttgart-West, Stuttgart, Baden-Württemberg, 70176, Deutschland</b><hr><ul><li><b>Roland Emmerich:</b> <i>Independence Day</i></li></ul>"
+        "popup_html": "<b>Arbeitsgericht Stuttgart, 86, Johannesstraße, Rosenberg, Stuttgart-West, Stuttgart, Baden-Württemberg, 70176, Deutschland</b><hr><ul><li><b>Roland Emmerich:</b> <i>Independence Day</i></li></ul>",
+        "directors": {
+            "Roland Emmerich": [
+                "Independence Day"
+            ]
+        }
     },
     {
         "place_name": "Knoxville, Knox County, East Tennessee, Tennessee, United States",
         "lat": 35.9603948,
         "lon": -83.9210261,
-        "popup_html": "<b>Knoxville, Knox County, East Tennessee, Tennessee, United States</b><hr><ul><li><b>Quentin Tarantino:</b> <i>Inglourious Basterds, Reservoir Dogs</i></li></ul>"
+        "popup_html": "<b>Knoxville, Knox County, East Tennessee, Tennessee, United States</b><hr><ul><li><b>Quentin Tarantino:</b> <i>Inglourious Basterds, Reservoir Dogs</i></li></ul>",
+        "directors": {
+            "Quentin Tarantino": [
+                "Inglourious Basterds",
+                "Reservoir Dogs"
+            ]
+        }
     },
     {
         "place_name": "Houston, Harris County, Texas, United States",
         "lat": 29.7589382,
         "lon": -95.3676974,
-        "popup_html": "<b>Houston, Harris County, Texas, United States</b><hr><ul><li><b>Wes Anderson:</b> <i>Isle Of Dogs</i></li></ul>"
+        "popup_html": "<b>Houston, Harris County, Texas, United States</b><hr><ul><li><b>Wes Anderson:</b> <i>Isle Of Dogs</i></li></ul>",
+        "directors": {
+            "Wes Anderson": [
+                "Isle Of Dogs"
+            ]
+        }
     },
     {
         "place_name": "Vicente López, Partido de Vicente López, Buenos Aires, Argentina",
         "lat": -34.5244484,
         "lon": -58.5036282,
-        "popup_html": "<b>Vicente López, Partido de Vicente López, Buenos Aires, Argentina</b><hr><ul><li><b>Andy Muschietti:</b> <i>It</i></li></ul>"
+        "popup_html": "<b>Vicente López, Partido de Vicente López, Buenos Aires, Argentina</b><hr><ul><li><b>Andy Muschietti:</b> <i>It</i></li></ul>",
+        "directors": {
+            "Andy Muschietti": [
+                "It"
+            ]
+        }
     },
     {
         "place_name": "Dartford, Kent, England, United Kingdom",
         "lat": 51.4443059,
         "lon": 0.21807,
-        "popup_html": "<b>Dartford, Kent, England, United Kingdom</b><hr><ul><li><b>Adam Curtis:</b> <i>It Felt Like A Kiss</i></li></ul>"
+        "popup_html": "<b>Dartford, Kent, England, United Kingdom</b><hr><ul><li><b>Adam Curtis:</b> <i>It Felt Like A Kiss</i></li></ul>",
+        "directors": {
+            "Adam Curtis": [
+                "It Felt Like A Kiss"
+            ]
+        }
     },
     {
         "place_name": "İstanbul, Fatih, İstanbul, Marmara Bölgesi, 34122, Türkiye",
         "lat": 41.006381,
         "lon": 28.9758715,
-        "popup_html": "<b>İstanbul, Fatih, İstanbul, Marmara Bölgesi, 34122, Türkiye</b><hr><ul><li><b>Tolga Karaçelik:</b> <i>Ivy</i></li></ul>"
+        "popup_html": "<b>İstanbul, Fatih, İstanbul, Marmara Bölgesi, 34122, Türkiye</b><hr><ul><li><b>Tolga Karaçelik:</b> <i>Ivy</i></li></ul>",
+        "directors": {
+            "Tolga Karaçelik": [
+                "Ivy"
+            ]
+        }
     },
     {
         "place_name": "대한민국",
         "lat": 36.638392,
         "lon": 127.6961188,
-        "popup_html": "<b>대한민국</b><hr><ul><li><b>Sunghoo Park:</b> <i>Jujutsu Kaisen 0</i></li></ul>"
+        "popup_html": "<b>대한민국</b><hr><ul><li><b>Sunghoo Park:</b> <i>Jujutsu Kaisen 0</i></li></ul>",
+        "directors": {
+            "Sunghoo Park": [
+                "Jujutsu Kaisen 0"
+            ]
+        }
+    },
+    {
+        "place_name": "Αθήνα, Δήμος Αθηναίων, Περιφερειακή Ενότητα Κεντρικού Τομέα Αθηνών, Περιφέρεια Αττικής, Αποκεντρωμένη Διοίκηση Αττικής, 105 57, Ελλάς",
+        "lat": 37.9755648,
+        "lon": 23.7348324,
+        "popup_html": "<b>Αθήνα, Δήμος Αθηναίων, Περιφερειακή Ενότητα Κεντρικού Τομέα Αθηνών, Περιφέρεια Αττικής, Αποκεντρωμένη Διοίκηση Αττικής, 105 57, Ελλάς</b><hr><ul><li><b>Yorgos Lanthimos:</b> <i>Kinds Of Kindness, The Lobster</i></li></ul>",
+        "directors": {
+            "Yorgos Lanthimos": [
+                "Kinds Of Kindness",
+                "The Lobster"
+            ]
+        }
     },
     {
         "place_name": "The Bronx, Bronx County, City of New York, New York, United States",
         "lat": 40.8466508,
         "lon": -73.8785937,
-        "popup_html": "<b>The Bronx, Bronx County, City of New York, New York, United States</b><hr><ul><li><b>Abel Ferrara:</b> <i>King Of New York</i></li><li><b>Jerry Schatzberg:</b> <i>Scarecrow</i></li></ul>"
+        "popup_html": "<b>The Bronx, Bronx County, City of New York, New York, United States</b><hr><ul><li><b>Abel Ferrara:</b> <i>King Of New York</i></li><li><b>Jerry Schatzberg:</b> <i>Scarecrow</i></li></ul>",
+        "directors": {
+            "Abel Ferrara": [
+                "King Of New York"
+            ],
+            "Jerry Schatzberg": [
+                "Scarecrow"
+            ]
+        }
+    },
+    {
+        "place_name": "Manila, Capital District, Metro Manila, Philippines",
+        "lat": 14.5904492,
+        "lon": 120.9803621,
+        "popup_html": "<b>Manila, Capital District, Metro Manila, Philippines</b><hr><ul><li><b>Mike de Leon:</b> <i>Kisapmata</i></li></ul>",
+        "directors": {
+            "Mike de Leon": [
+                "Kisapmata"
+            ]
+        }
     },
     {
         "place_name": "Rimini, Emilia-Romagna, Italia",
         "lat": 43.9465433,
         "lon": 12.630749,
-        "popup_html": "<b>Rimini, Emilia-Romagna, Italia</b><hr><ul><li><b>Federico Fellini:</b> <i>La Dolce Vita</i></li></ul>"
+        "popup_html": "<b>Rimini, Emilia-Romagna, Italia</b><hr><ul><li><b>Federico Fellini:</b> <i>La Dolce Vita</i></li></ul>",
+        "directors": {
+            "Federico Fellini": [
+                "La Dolce Vita"
+            ]
+        }
     },
     {
         "place_name": "Sacramento, Sacramento County, California, United States",
         "lat": 38.5810606,
         "lon": -121.493895,
-        "popup_html": "<b>Sacramento, Sacramento County, California, United States</b><hr><ul><li><b>Greta Gerwig:</b> <i>Lady Bird</i></li></ul>"
+        "popup_html": "<b>Sacramento, Sacramento County, California, United States</b><hr><ul><li><b>Greta Gerwig:</b> <i>Lady Bird</i></li></ul>",
+        "directors": {
+            "Greta Gerwig": [
+                "Lady Bird"
+            ]
+        }
     },
     {
         "place_name": "مصر",
         "lat": 26.2540493,
         "lon": 29.2675469,
-        "popup_html": "<b>مصر</b><hr><ul><li><b>Salah Abu Seif:</b> <i>Letter From An Unknown Woman</i></li></ul>"
+        "popup_html": "<b>مصر</b><hr><ul><li><b>Salah Abu Seif:</b> <i>Letter From An Unknown Woman</i></li></ul>",
+        "directors": {
+            "Salah Abu Seif": [
+                "Letter From An Unknown Woman"
+            ]
+        }
     },
     {
         "place_name": "福島市, 福島県, 日本",
         "lat": 37.760777,
         "lon": 140.4745807,
-        "popup_html": "<b>福島市, 福島県, 日本</b><hr><ul><li><b>Kiyotaka Oshiyama:</b> <i>Look Back</i></li></ul>"
+        "popup_html": "<b>福島市, 福島県, 日本</b><hr><ul><li><b>Kiyotaka Oshiyama:</b> <i>Look Back</i></li></ul>",
+        "directors": {
+            "Kiyotaka Oshiyama": [
+                "Look Back"
+            ]
+        }
     },
     {
         "place_name": "New Orleans, Orleans Parish, Louisiana, United States",
         "lat": 29.9759983,
         "lon": -90.0782127,
-        "popup_html": "<b>New Orleans, Orleans Parish, Louisiana, United States</b><hr><ul><li><b>Tyler Perry:</b> <i>Mea Culpa</i></li></ul>"
+        "popup_html": "<b>New Orleans, Orleans Parish, Louisiana, United States</b><hr><ul><li><b>Tyler Perry:</b> <i>Mea Culpa</i></li></ul>",
+        "directors": {
+            "Tyler Perry": [
+                "Mea Culpa"
+            ]
+        }
+    },
+    {
+        "place_name": "England, United Kingdom",
+        "lat": 52.5310214,
+        "lon": -1.2649062,
+        "popup_html": "<b>England, United Kingdom</b><hr><ul><li><b>Terence Dixon:</b> <i>Meeting The Man James Baldwin In Paris</i></li></ul>",
+        "directors": {
+            "Terence Dixon": [
+                "Meeting The Man James Baldwin In Paris"
+            ]
+        }
     },
     {
         "place_name": "대구광역시, 대한민국",
         "lat": 35.8713,
         "lon": 128.6018,
-        "popup_html": "<b>대구광역시, 대한민국</b><hr><ul><li><b>Bong Joon Ho:</b> <i>Memories Of Murder, Mickey 17, Parasite</i></li></ul>"
+        "popup_html": "<b>대구광역시, 대한민국</b><hr><ul><li><b>Bong Joon Ho:</b> <i>Memories Of Murder, Mickey 17, Parasite</i></li></ul>",
+        "directors": {
+            "Bong Joon Ho": [
+                "Memories Of Murder",
+                "Mickey 17",
+                "Parasite"
+            ]
+        }
     },
     {
         "place_name": "廣東路, 頭崙埔, 華山里, 屏東市, 屏東縣, 900, 臺灣",
-        "lat": 22.6822161,
-        "lon": 120.4998113,
-        "popup_html": "<b>廣東路, 頭崙埔, 華山里, 屏東市, 屏東縣, 900, 臺灣</b><hr><ul><li><b>Hou Hsiao-hsien:</b> <i>Millennium Mambo</i></li></ul>"
+        "lat": 22.6823046,
+        "lon": 120.4997113,
+        "popup_html": "<b>廣東路, 頭崙埔, 華山里, 屏東市, 屏東縣, 900, 臺灣</b><hr><ul><li><b>Hou Hsiao-hsien:</b> <i>Millennium Mambo</i></li></ul>",
+        "directors": {
+            "Hou Hsiao-hsien": [
+                "Millennium Mambo"
+            ]
+        }
     },
     {
         "place_name": "City of Saratoga Springs, Saratoga County, New York, 12866, United States",
         "lat": 43.0821793,
         "lon": -73.7853915,
-        "popup_html": "<b>City of Saratoga Springs, Saratoga County, New York, 12866, United States</b><hr><ul><li><b>Keith LaFountaine:</b> <i>Mirror</i></li></ul>"
+        "popup_html": "<b>City of Saratoga Springs, Saratoga County, New York, 12866, United States</b><hr><ul><li><b>Keith LaFountaine:</b> <i>Mirror</i></li></ul>",
+        "directors": {
+            "Keith LaFountaine": [
+                "Mirror"
+            ]
+        }
     },
     {
         "place_name": "Villefranche-de-Rouergue, Aveyron, Occitanie, France métropolitaine, 12200, France",
         "lat": 44.3517623,
         "lon": 2.0375431,
-        "popup_html": "<b>Villefranche-de-Rouergue, Aveyron, Occitanie, France métropolitaine, 12200, France</b><hr><ul><li><b>Alain Guiraudie:</b> <i>Misericordia</i></li></ul>"
+        "popup_html": "<b>Villefranche-de-Rouergue, Aveyron, Occitanie, France métropolitaine, 12200, France</b><hr><ul><li><b>Alain Guiraudie:</b> <i>Misericordia</i></li></ul>",
+        "directors": {
+            "Alain Guiraudie": [
+                "Misericordia"
+            ]
+        }
     },
     {
         "place_name": "Princeton Junction, Vaughn Drive, Princeton Junction, West Windsor, Mercer County, New Jersey, 08537, United States",
         "lat": 40.3159898,
         "lon": -74.6241189,
-        "popup_html": "<b>Princeton Junction, Vaughn Drive, Princeton Junction, West Windsor, Mercer County, New Jersey, 08537, United States</b><hr><ul><li><b>Christopher McQuarrie:</b> <i>Mission Impossible Fallout, Mission Impossible Rogue Nation</i></li></ul>"
+        "popup_html": "<b>Princeton Junction, Vaughn Drive, Princeton Junction, West Windsor, Mercer County, New Jersey, 08537, United States</b><hr><ul><li><b>Christopher McQuarrie:</b> <i>Mission Impossible Fallout, Mission Impossible Rogue Nation</i></li></ul>",
+        "directors": {
+            "Christopher McQuarrie": [
+                "Mission Impossible Fallout",
+                "Mission Impossible Rogue Nation"
+            ]
+        }
     },
     {
         "place_name": "广州市, 广东省, 中国",
         "lat": 23.1301964,
         "lon": 113.2592945,
-        "popup_html": "<b>广州市, 广东省, 中国</b><hr><ul><li><b>John Woo:</b> <i>Mission Impossible Ii</i></li></ul>"
+        "popup_html": "<b>广州市, 广东省, 中国</b><hr><ul><li><b>John Woo:</b> <i>Mission Impossible Ii</i></li></ul>",
+        "directors": {
+            "John Woo": [
+                "Mission Impossible Ii"
+            ]
+        }
     },
     {
         "place_name": "Wellington, Wellington City, Wellington, 6011, New Zealand / Aotearoa",
         "lat": -41.2887953,
         "lon": 174.7772114,
-        "popup_html": "<b>Wellington, Wellington City, Wellington, 6011, New Zealand / Aotearoa</b><hr><ul><li><b>Niki Caro:</b> <i>Mulan</i></li></ul>"
+        "popup_html": "<b>Wellington, Wellington City, Wellington, 6011, New Zealand / Aotearoa</b><hr><ul><li><b>Niki Caro:</b> <i>Mulan</i></li></ul>",
+        "directors": {
+            "Niki Caro": [
+                "Mulan"
+            ]
+        }
     },
     {
         "place_name": "Santa Monica, Los Angeles County, California, United States",
         "lat": 34.0194704,
         "lon": -118.491227,
-        "popup_html": "<b>Santa Monica, Los Angeles County, California, United States</b><hr><ul><li><b>Dan Gilroy:</b> <i>Nightcrawler</i></li></ul>"
+        "popup_html": "<b>Santa Monica, Los Angeles County, California, United States</b><hr><ul><li><b>Dan Gilroy:</b> <i>Nightcrawler</i></li></ul>",
+        "directors": {
+            "Dan Gilroy": [
+                "Nightcrawler"
+            ]
+        }
     },
     {
         "place_name": "Los Angeles, Los Angeles County, California, United States",
         "lat": 34.0536909,
         "lon": -118.242766,
-        "popup_html": "<b>Los Angeles, Los Angeles County, California, United States</b><hr><ul><li><b>Gary Ross:</b> <i>Oceans Eight, The Hunger Games</i></li></ul>"
+        "popup_html": "<b>Los Angeles, Los Angeles County, California, United States</b><hr><ul><li><b>Gary Ross:</b> <i>Oceans Eight, The Hunger Games</i></li></ul>",
+        "directors": {
+            "Gary Ross": [
+                "Oceans Eight",
+                "The Hunger Games"
+            ]
+        }
     },
     {
         "place_name": "Dallas, Dallas County, Texas, United States",
         "lat": 32.7762719,
         "lon": -96.7968559,
-        "popup_html": "<b>Dallas, Dallas County, Texas, United States</b><hr><ul><li><b>Jennie Livingston:</b> <i>Paris Is Burning</i></li></ul>"
+        "popup_html": "<b>Dallas, Dallas County, Texas, United States</b><hr><ul><li><b>Jennie Livingston:</b> <i>Paris Is Burning</i></li></ul>",
+        "directors": {
+            "Jennie Livingston": [
+                "Paris Is Burning"
+            ]
+        }
     },
     {
         "place_name": "Düsseldorf, Nordrhein-Westfalen, Deutschland",
         "lat": 51.2254018,
         "lon": 6.7763137,
-        "popup_html": "<b>Düsseldorf, Nordrhein-Westfalen, Deutschland</b><hr><ul><li><b>Wim Wenders:</b> <i>Paris Texas, Perfect Days</i></li></ul>"
+        "popup_html": "<b>Düsseldorf, Nordrhein-Westfalen, Deutschland</b><hr><ul><li><b>Wim Wenders:</b> <i>Paris Texas, Perfect Days</i></li></ul>",
+        "directors": {
+            "Wim Wenders": [
+                "Paris Texas",
+                "Perfect Days"
+            ]
+        }
     },
     {
         "place_name": "Pontoise, Val-d'Oise, France métropolitaine, France",
         "lat": 49.0508845,
         "lon": 2.1008067,
-        "popup_html": "<b>Pontoise, Val-d'Oise, France métropolitaine, France</b><hr><ul><li><b>Céline Sciamma:</b> <i>Portrait Of A Lady On Fire</i></li></ul>"
+        "popup_html": "<b>Pontoise, Val-d'Oise, France métropolitaine, France</b><hr><ul><li><b>Céline Sciamma:</b> <i>Portrait Of A Lady On Fire</i></li></ul>",
+        "directors": {
+            "Céline Sciamma": [
+                "Portrait Of A Lady On Fire"
+            ]
+        }
     },
     {
         "place_name": "Rochester, Kent, England, United Kingdom",
         "lat": 51.3883811,
         "lon": 0.504925,
-        "popup_html": "<b>Rochester, Kent, England, United Kingdom</b><hr><ul><li><b>Matthew Warchus:</b> <i>Pride</i></li></ul>"
+        "popup_html": "<b>Rochester, Kent, England, United Kingdom</b><hr><ul><li><b>Matthew Warchus:</b> <i>Pride</i></li></ul>",
+        "directors": {
+            "Matthew Warchus": [
+                "Pride"
+            ]
+        }
     },
     {
         "place_name": "Palermo, Sicilia, Italia",
         "lat": 38.1112268,
         "lon": 13.3524434,
-        "popup_html": "<b>Palermo, Sicilia, Italia</b><hr><ul><li><b>Luca Guadagnino:</b> <i>Queer, Suspiria</i></li></ul>"
+        "popup_html": "<b>Palermo, Sicilia, Italia</b><hr><ul><li><b>Luca Guadagnino:</b> <i>Queer, Suspiria</i></li></ul>",
+        "directors": {
+            "Luca Guadagnino": [
+                "Queer",
+                "Suspiria"
+            ]
+        }
     },
     {
         "place_name": "Baltimore, Maryland, United States",
         "lat": 39.2908816,
         "lon": -76.610759,
-        "popup_html": "<b>Baltimore, Maryland, United States</b><hr><ul><li><b>Barry Levinson:</b> <i>Rain Man</i></li></ul>"
+        "popup_html": "<b>Baltimore, Maryland, United States</b><hr><ul><li><b>Barry Levinson:</b> <i>Rain Man</i></li></ul>",
+        "directors": {
+            "Barry Levinson": [
+                "Rain Man"
+            ]
+        }
     },
     {
         "place_name": "Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, Canada",
         "lat": 45.5031824,
         "lon": -73.5698065,
-        "popup_html": "<b>Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, Canada</b><hr><ul><li><b>Shawn Levy:</b> <i>Real Steel</i></li></ul>"
+        "popup_html": "<b>Montréal, Agglomération de Montréal, Montréal (région administrative), Québec, Canada</b><hr><ul><li><b>Shawn Levy:</b> <i>Real Steel</i></li></ul>",
+        "directors": {
+            "Shawn Levy": [
+                "Real Steel"
+            ]
+        }
     },
     {
         "place_name": "Kuching, Bahagian Kuching, Sarawak, 93000, Malaysia مليسيا",
         "lat": 1.5597561,
         "lon": 110.345397,
-        "popup_html": "<b>Kuching, Bahagian Kuching, Sarawak, 93000, Malaysia مليسيا</b><hr><ul><li><b>Tsai Ming-liang:</b> <i>Rebels Of The Neon God</i></li><li><b>James Wan:</b> <i>The Conjuring</i></li></ul>"
+        "popup_html": "<b>Kuching, Bahagian Kuching, Sarawak, 93000, Malaysia مليسيا</b><hr><ul><li><b>Tsai Ming-liang:</b> <i>Rebels Of The Neon God</i></li><li><b>James Wan:</b> <i>The Conjuring</i></li></ul>",
+        "directors": {
+            "Tsai Ming-liang": [
+                "Rebels Of The Neon God"
+            ],
+            "James Wan": [
+                "The Conjuring"
+            ]
+        }
     },
     {
         "place_name": "Serang, Banten, Jawa, Indonesia",
         "lat": -6.1169662,
         "lon": 106.1518079,
-        "popup_html": "<b>Serang, Banten, Jawa, Indonesia</b><hr><ul><li><b>Maulana Ghiffari:</b> <i>Rec</i></li></ul>"
+        "popup_html": "<b>Serang, Banten, Jawa, Indonesia</b><hr><ul><li><b>Maulana Ghiffari:</b> <i>Rec</i></li></ul>",
+        "directors": {
+            "Maulana Ghiffari": [
+                "Rec"
+            ]
+        }
     },
     {
         "place_name": "Leytonstone, London Borough of Waltham Forest, London, Greater London, England, E11 3AA, United Kingdom",
         "lat": 51.5684052,
         "lon": 0.0111701,
-        "popup_html": "<b>Leytonstone, London Borough of Waltham Forest, London, Greater London, England, E11 3AA, United Kingdom</b><hr><ul><li><b>Alfred Hitchcock:</b> <i>Rope</i></li></ul>"
+        "popup_html": "<b>Leytonstone, London Borough of Waltham Forest, London, Greater London, England, E11 3AA, United Kingdom</b><hr><ul><li><b>Alfred Hitchcock:</b> <i>Rope</i></li></ul>",
+        "directors": {
+            "Alfred Hitchcock": [
+                "Rope"
+            ]
+        }
     },
     {
         "place_name": "Wuppertal, Nordrhein-Westfalen, Deutschland",
         "lat": 51.264018,
         "lon": 7.1780374,
-        "popup_html": "<b>Wuppertal, Nordrhein-Westfalen, Deutschland</b><hr><ul><li><b>Tom Tykwer:</b> <i>Run Lola Run</i></li></ul>"
+        "popup_html": "<b>Wuppertal, Nordrhein-Westfalen, Deutschland</b><hr><ul><li><b>Tom Tykwer:</b> <i>Run Lola Run</i></li></ul>",
+        "directors": {
+            "Tom Tykwer": [
+                "Run Lola Run"
+            ]
+        }
     },
     {
         "place_name": "Miami Beach, Miami-Dade County, Florida, United States",
         "lat": 25.7929198,
         "lon": -80.1353006,
-        "popup_html": "<b>Miami Beach, Miami-Dade County, Florida, United States</b><hr><ul><li><b>Brett Ratner:</b> <i>Rush Hour, Rush Hour 2</i></li></ul>"
+        "popup_html": "<b>Miami Beach, Miami-Dade County, Florida, United States</b><hr><ul><li><b>Brett Ratner:</b> <i>Rush Hour, Rush Hour 2</i></li></ul>",
+        "directors": {
+            "Brett Ratner": [
+                "Rush Hour",
+                "Rush Hour 2"
+            ]
+        }
     },
     {
         "place_name": "宇部市, 山口県, 日本",
         "lat": 33.9518498,
         "lon": 131.2472243,
-        "popup_html": "<b>宇部市, 山口県, 日本</b><hr><ul><li><b>Hideaki Anno:</b> <i>Ryusei Kacho</i></li></ul>"
+        "popup_html": "<b>宇部市, 山口県, 日本</b><hr><ul><li><b>Hideaki Anno:</b> <i>Ryusei Kacho</i></li></ul>",
+        "directors": {
+            "Hideaki Anno": [
+                "Ryusei Kacho"
+            ]
+        }
     },
     {
         "place_name": "Gander, Newfoundland, Newfoundland and Labrador, Canada",
         "lat": 48.9592291,
         "lon": -54.6187879,
-        "popup_html": "<b>Gander, Newfoundland, Newfoundland and Labrador, Canada</b><hr><ul><li><b>Brad Peyton:</b> <i>San Andreas</i></li></ul>"
+        "popup_html": "<b>Gander, Newfoundland, Newfoundland and Labrador, Canada</b><hr><ul><li><b>Brad Peyton:</b> <i>San Andreas</i></li></ul>",
+        "directors": {
+            "Brad Peyton": [
+                "San Andreas"
+            ]
+        }
     },
     {
         "place_name": "Kansas City, Jackson County, Missouri, United States",
         "lat": 39.100105,
         "lon": -94.5781416,
-        "popup_html": "<b>Kansas City, Jackson County, Missouri, United States</b><hr><ul><li><b>Stan Brakhage:</b> <i>Seasons</i></li></ul>"
+        "popup_html": "<b>Kansas City, Jackson County, Missouri, United States</b><hr><ul><li><b>Stan Brakhage:</b> <i>Seasons</i></li></ul>",
+        "directors": {
+            "Stan Brakhage": [
+                "Seasons"
+            ]
+        }
     },
     {
         "place_name": "London, Greater London, England, United Kingdom",
-        "lat": 51.4893335,
-        "lon": -0.1440551,
-        "popup_html": "<b>London, Greater London, England, United Kingdom</b><hr><ul><li><b>Jonathan Glazer:</b> <i>Sexy Beast, The Zone Of Interest</i></li></ul>"
+        "lat": 51.5074456,
+        "lon": -0.1277653,
+        "popup_html": "<b>London, Greater London, England, United Kingdom</b><hr><ul><li><b>Jonathan Glazer:</b> <i>Sexy Beast, The Zone Of Interest</i></li></ul>",
+        "directors": {
+            "Jonathan Glazer": [
+                "Sexy Beast",
+                "The Zone Of Interest"
+            ]
+        }
     },
     {
         "place_name": "Lidingö kommun, Stockholms län, Sverige",
         "lat": 59.3669445,
         "lon": 18.1820897,
-        "popup_html": "<b>Lidingö kommun, Stockholms län, Sverige</b><hr><ul><li><b>Hannes Holm:</b> <i>Show Me Love</i></li></ul>"
+        "popup_html": "<b>Lidingö kommun, Stockholms län, Sverige</b><hr><ul><li><b>Hannes Holm:</b> <i>Show Me Love</i></li></ul>",
+        "directors": {
+            "Hannes Holm": [
+                "Show Me Love"
+            ]
+        }
     },
     {
         "place_name": "Reading, England, RG1 1JL, United Kingdom",
         "lat": 51.4564242,
         "lon": -0.9700664,
-        "popup_html": "<b>Reading, England, RG1 1JL, United Kingdom</b><hr><ul><li><b>Sam Mendes:</b> <i>Skyfall</i></li></ul>"
+        "popup_html": "<b>Reading, England, RG1 1JL, United Kingdom</b><hr><ul><li><b>Sam Mendes:</b> <i>Skyfall</i></li></ul>",
+        "directors": {
+            "Sam Mendes": [
+                "Skyfall"
+            ]
+        }
     },
     {
         "place_name": "Manchester, Greater Manchester, England, United Kingdom",
         "lat": 53.4794892,
         "lon": -2.2451148,
-        "popup_html": "<b>Manchester, Greater Manchester, England, United Kingdom</b><hr><ul><li><b>Danny Boyle:</b> <i>Slumdog Millionaire</i></li></ul>"
+        "popup_html": "<b>Manchester, Greater Manchester, England, United Kingdom</b><hr><ul><li><b>Danny Boyle:</b> <i>Slumdog Millionaire</i></li></ul>",
+        "directors": {
+            "Danny Boyle": [
+                "Slumdog Millionaire"
+            ]
+        }
     },
     {
         "place_name": "Normal, McLean County, Illinois, United States",
         "lat": 40.5092961,
         "lon": -88.9843937,
-        "popup_html": "<b>Normal, McLean County, Illinois, United States</b><hr><ul><li><b>Jeff Fowler:</b> <i>Sonic The Hedgehog</i></li></ul>"
+        "popup_html": "<b>Normal, McLean County, Illinois, United States</b><hr><ul><li><b>Jeff Fowler:</b> <i>Sonic The Hedgehog</i></li></ul>",
+        "directors": {
+            "Jeff Fowler": [
+                "Sonic The Hedgehog"
+            ]
+        }
     },
     {
         "place_name": "Massachusetts, United States",
         "lat": 42.3788774,
         "lon": -72.032366,
-        "popup_html": "<b>Massachusetts, United States</b><hr><ul><li><b>Darius Marder:</b> <i>Sound Of Metal</i></li></ul>"
+        "popup_html": "<b>Massachusetts, United States</b><hr><ul><li><b>Darius Marder:</b> <i>Sound Of Metal</i></li></ul>",
+        "directors": {
+            "Darius Marder": [
+                "Sound Of Metal"
+            ]
+        }
     },
     {
         "place_name": "Mahé, Mahe Taluk, Mahé, Puducherry, 673310, India",
         "lat": 11.7021978,
         "lon": 75.5364701,
-        "popup_html": "<b>Mahé, Mahe Taluk, Mahé, Puducherry, 673310, India</b><hr><ul><li><b>M. Night Shyamalan:</b> <i>Split, The Happening</i></li></ul>"
+        "popup_html": "<b>Mahé, Mahe Taluk, Mahé, Puducherry, 673310, India</b><hr><ul><li><b>M. Night Shyamalan:</b> <i>Split, The Happening</i></li></ul>",
+        "directors": {
+            "M. Night Shyamalan": [
+                "Split",
+                "The Happening"
+            ]
+        }
     },
     {
         "place_name": "Rio de Janeiro, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, Brasil",
         "lat": -22.9110137,
         "lon": -43.2093727,
-        "popup_html": "<b>Rio de Janeiro, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, Brasil</b><hr><ul><li><b>Júlio Bressane:</b> <i>Tabu</i></li></ul>"
+        "popup_html": "<b>Rio de Janeiro, Região Geográfica Imediata do Rio de Janeiro, Região Metropolitana do Rio de Janeiro, Região Geográfica Intermediária do Rio de Janeiro, Rio de Janeiro, Região Sudeste, Brasil</b><hr><ul><li><b>Júlio Bressane:</b> <i>Tabu</i></li></ul>",
+        "directors": {
+            "Júlio Bressane": [
+                "Tabu"
+            ]
+        }
     },
     {
         "place_name": "Queens, Queens County, City of New York, New York, United States",
         "lat": 40.7135078,
         "lon": -73.8283132,
-        "popup_html": "<b>Queens, Queens County, City of New York, New York, United States</b><hr><ul><li><b>Martin Scorsese:</b> <i>Taxi Driver, The Wolf Of Wall Street</i></li></ul>"
+        "popup_html": "<b>Queens, Queens County, City of New York, New York, United States</b><hr><ul><li><b>Martin Scorsese:</b> <i>Taxi Driver, The Wolf Of Wall Street</i></li></ul>",
+        "directors": {
+            "Martin Scorsese": [
+                "Taxi Driver",
+                "The Wolf Of Wall Street"
+            ]
+        }
     },
     {
         "place_name": "City of Brisbane, Queensland, Australia",
         "lat": -27.4689623,
         "lon": 153.0235009,
-        "popup_html": "<b>City of Brisbane, Queensland, Australia</b><hr><ul><li><b>Jennifer Kent:</b> <i>The Babadook</i></li></ul>"
+        "popup_html": "<b>City of Brisbane, Queensland, Australia</b><hr><ul><li><b>Jennifer Kent:</b> <i>The Babadook</i></li></ul>",
+        "directors": {
+            "Jennifer Kent": [
+                "The Babadook"
+            ]
+        }
     },
     {
         "place_name": "Pisa, Toscana, Italia",
         "lat": 43.4714722,
         "lon": 10.6797912,
-        "popup_html": "<b>Pisa, Toscana, Italia</b><hr><ul><li><b>Gillo Pontecorvo:</b> <i>The Battle Of Algiers</i></li></ul>"
+        "popup_html": "<b>Pisa, Toscana, Italia</b><hr><ul><li><b>Gillo Pontecorvo:</b> <i>The Battle Of Algiers</i></li></ul>",
+        "directors": {
+            "Gillo Pontecorvo": [
+                "The Battle Of Algiers"
+            ]
+        }
     },
     {
         "place_name": "Sarasota, Sarasota County, Florida, United States",
         "lat": 27.3365805,
         "lon": -82.5308545,
-        "popup_html": "<b>Sarasota, Sarasota County, Florida, United States</b><hr><ul><li><b>Daniel Myrick:</b> <i>The Blair Witch Project</i></li></ul>"
+        "popup_html": "<b>Sarasota, Sarasota County, Florida, United States</b><hr><ul><li><b>Daniel Myrick:</b> <i>The Blair Witch Project</i></li></ul>",
+        "directors": {
+            "Daniel Myrick": [
+                "The Blair Witch Project"
+            ]
+        }
     },
     {
         "place_name": "Scottsdale, Maricopa County, Arizona, United States",
         "lat": 33.4942189,
         "lon": -111.926018,
-        "popup_html": "<b>Scottsdale, Maricopa County, Arizona, United States</b><hr><ul><li><b>Brady Corbet:</b> <i>The Brutalist</i></li></ul>"
+        "popup_html": "<b>Scottsdale, Maricopa County, Arizona, United States</b><hr><ul><li><b>Brady Corbet:</b> <i>The Brutalist</i></li></ul>",
+        "directors": {
+            "Brady Corbet": [
+                "The Brutalist"
+            ]
+        }
     },
     {
         "place_name": "Denver, Colorado, United States",
         "lat": 39.7392364,
         "lon": -104.984862,
-        "popup_html": "<b>Denver, Colorado, United States</b><hr><ul><li><b>David Fincher:</b> <i>The Curious Case Of Benjamin Button, Zodiac</i></li></ul>"
+        "popup_html": "<b>Denver, Colorado, United States</b><hr><ul><li><b>David Fincher:</b> <i>The Curious Case Of Benjamin Button, Zodiac</i></li></ul>",
+        "directors": {
+            "David Fincher": [
+                "The Curious Case Of Benjamin Button",
+                "Zodiac"
+            ]
+        }
     },
     {
         "place_name": "Aarhus, Aarhus Kommune, Region Midtjylland, 8000, Danmark",
         "lat": 56.1496278,
         "lon": 10.2134046,
-        "popup_html": "<b>Aarhus, Aarhus Kommune, Region Midtjylland, 8000, Danmark</b><hr><ul><li><b>Jørgen Leth:</b> <i>The Five Obstructions</i></li></ul>"
+        "popup_html": "<b>Aarhus, Aarhus Kommune, Region Midtjylland, 8000, Danmark</b><hr><ul><li><b>Jørgen Leth:</b> <i>The Five Obstructions</i></li></ul>",
+        "directors": {
+            "Jørgen Leth": [
+                "The Five Obstructions"
+            ]
+        }
     },
     {
         "place_name": "Exeter, Devon, Devon and Torbay, England, United Kingdom",
         "lat": 50.7256138,
         "lon": -3.5269209,
-        "popup_html": "<b>Exeter, Devon, Devon and Torbay, England, United Kingdom</b><hr><ul><li><b>Rupert Wyatt:</b> <i>The Gambler</i></li></ul>"
+        "popup_html": "<b>Exeter, Devon, Devon and Torbay, England, United Kingdom</b><hr><ul><li><b>Rupert Wyatt:</b> <i>The Gambler</i></li></ul>",
+        "directors": {
+            "Rupert Wyatt": [
+                "The Gambler"
+            ]
+        }
     },
     {
         "place_name": "Canterbury, Kent, England, United Kingdom",
         "lat": 51.2800275,
         "lon": 1.0802533,
-        "popup_html": "<b>Canterbury, Kent, England, United Kingdom</b><hr><ul><li><b>Tacita Dean:</b> <i>The Green Ray</i></li></ul>"
+        "popup_html": "<b>Canterbury, Kent, England, United Kingdom</b><hr><ul><li><b>Tacita Dean:</b> <i>The Green Ray</i></li></ul>",
+        "directors": {
+            "Tacita Dean": [
+                "The Green Ray"
+            ]
+        }
     },
     {
         "place_name": "Wien, Österreich",
         "lat": 48.2083537,
         "lon": 16.3725042,
-        "popup_html": "<b>Wien, Österreich</b><hr><ul><li><b>Francis Lawrence:</b> <i>The Hunger Games Mockingjay Part 2</i></li></ul>"
+        "popup_html": "<b>Wien, Österreich</b><hr><ul><li><b>Francis Lawrence:</b> <i>The Hunger Games Mockingjay Part 2</i></li></ul>",
+        "directors": {
+            "Francis Lawrence": [
+                "The Hunger Games Mockingjay Part 2"
+            ]
+        }
     },
     {
         "place_name": "Kraków, województwo małopolskie, Polska",
-        "lat": 50.0619474,
-        "lon": 19.9368564,
-        "popup_html": "<b>Kraków, województwo małopolskie, Polska</b><hr><ul><li><b>Małgorzata Szumowska:</b> <i>The Idiots</i></li></ul>"
+        "lat": 50.0469432,
+        "lon": 19.9971534,
+        "popup_html": "<b>Kraków, województwo małopolskie, Polska</b><hr><ul><li><b>Małgorzata Szumowska:</b> <i>The Idiots</i></li></ul>",
+        "directors": {
+            "Małgorzata Szumowska": [
+                "The Idiots"
+            ]
+        }
     },
     {
         "place_name": "Leiden, Zuid-Holland, Nederland",
         "lat": 52.1594747,
         "lon": 4.4908843,
-        "popup_html": "<b>Leiden, Zuid-Holland, Nederland</b><hr><ul><li><b>Harald Zwart:</b> <i>The Karate Kid</i></li></ul>"
+        "popup_html": "<b>Leiden, Zuid-Holland, Nederland</b><hr><ul><li><b>Harald Zwart:</b> <i>The Karate Kid</i></li></ul>",
+        "directors": {
+            "Harald Zwart": [
+                "The Karate Kid"
+            ]
+        }
     },
     {
         "place_name": "Köln, Nordrhein-Westfalen, Deutschland",
         "lat": 50.938361,
         "lon": 6.959974,
-        "popup_html": "<b>Köln, Nordrhein-Westfalen, Deutschland</b><hr><ul><li><b>Florian Henckel von Donnersmarck:</b> <i>The Lives Of Others</i></li></ul>"
+        "popup_html": "<b>Köln, Nordrhein-Westfalen, Deutschland</b><hr><ul><li><b>Florian Henckel von Donnersmarck:</b> <i>The Lives Of Others</i></li></ul>",
+        "directors": {
+            "Florian Henckel von Donnersmarck": [
+                "The Lives Of Others"
+            ]
+        }
     },
     {
-        "place_name": "Ipswitch BMX Track, Hayman Road, Greenwich, Ipswich, Suffolk, England, IP3 0HD, United Kingdom",
+        "place_name": "Ipswitch BMX Track, Hayman Road, Greenwich, Ipswich, Suffolk, England, IP3 0HA, United Kingdom",
         "lat": 52.0389138,
         "lon": 1.1778203,
-        "popup_html": "<b>Ipswitch BMX Track, Hayman Road, Greenwich, Ipswich, Suffolk, England, IP3 0HD, United Kingdom</b><hr><ul><li><b>Aneil Karia:</b> <i>The Long Goodbye</i></li></ul>"
+        "popup_html": "<b>Ipswitch BMX Track, Hayman Road, Greenwich, Ipswich, Suffolk, England, IP3 0HA, United Kingdom</b><hr><ul><li><b>Aneil Karia:</b> <i>The Long Goodbye</i></li></ul>",
+        "directors": {
+            "Aneil Karia": [
+                "The Long Goodbye"
+            ]
+        }
     },
     {
         "place_name": "Bruxelles - Brussel, Brussel-Hoofdstad - Bruxelles-Capitale, Région de Bruxelles-Capitale - Brussels Hoofdstedelijk Gewest, België / Belgique / Belgien",
         "lat": 50.8465573,
         "lon": 4.351697,
-        "popup_html": "<b>Bruxelles - Brussel, Brussel-Hoofdstad - Bruxelles-Capitale, Région de Bruxelles-Capitale - Brussels Hoofdstedelijk Gewest, België / Belgique / Belgien</b><hr><ul><li><b>Chantal Akerman:</b> <i>The Meetings Of Anna</i></li></ul>"
+        "popup_html": "<b>Bruxelles - Brussel, Brussel-Hoofdstad - Bruxelles-Capitale, Région de Bruxelles-Capitale - Brussels Hoofdstedelijk Gewest, België / Belgique / Belgien</b><hr><ul><li><b>Chantal Akerman:</b> <i>The Meetings Of Anna</i></li></ul>",
+        "directors": {
+            "Chantal Akerman": [
+                "The Meetings Of Anna"
+            ]
+        }
     },
     {
         "place_name": "Indianapolis, Marion County, Indiana, United States",
         "lat": 39.7683331,
         "lon": -86.1583502,
-        "popup_html": "<b>Indianapolis, Marion County, Indiana, United States</b><hr><ul><li><b>Stephen Sommers:</b> <i>The Mummy</i></li></ul>"
+        "popup_html": "<b>Indianapolis, Marion County, Indiana, United States</b><hr><ul><li><b>Stephen Sommers:</b> <i>The Mummy</i></li></ul>",
+        "directors": {
+            "Stephen Sommers": [
+                "The Mummy"
+            ]
+        }
     },
     {
         "place_name": "Glen Ridge, Essex County, New Jersey, 07028, United States",
         "lat": 40.805378,
         "lon": -74.2037566,
-        "popup_html": "<b>Glen Ridge, Essex County, New Jersey, 07028, United States</b><hr><ul><li><b>Henry Selick:</b> <i>The Nightmare Before Christmas</i></li></ul>"
+        "popup_html": "<b>Glen Ridge, Essex County, New Jersey, 07028, United States</b><hr><ul><li><b>Henry Selick:</b> <i>The Nightmare Before Christmas</i></li></ul>",
+        "directors": {
+            "Henry Selick": [
+                "The Nightmare Before Christmas"
+            ]
+        }
     },
     {
         "place_name": "Brookline, Norfolk County, Massachusetts, United States",
         "lat": 42.332918,
         "lon": -71.1187829,
-        "popup_html": "<b>Brookline, Norfolk County, Massachusetts, United States</b><hr><ul><li><b>William A. Wellman:</b> <i>The Ox Bow Incident</i></li></ul>"
+        "popup_html": "<b>Brookline, Norfolk County, Massachusetts, United States</b><hr><ul><li><b>William A. Wellman:</b> <i>The Ox Bow Incident</i></li></ul>",
+        "directors": {
+            "William A. Wellman": [
+                "The Ox Bow Incident"
+            ]
+        }
     },
     {
         "place_name": "Roma, Roma Capitale, Lazio, Italia",
         "lat": 41.8933203,
         "lon": 12.4829321,
-        "popup_html": "<b>Roma, Roma Capitale, Lazio, Italia</b><hr><ul><li><b>Uberto Pasolini:</b> <i>The Return</i></li></ul>"
+        "popup_html": "<b>Roma, Roma Capitale, Lazio, Italia</b><hr><ul><li><b>Uberto Pasolini:</b> <i>The Return</i></li></ul>",
+        "directors": {
+            "Uberto Pasolini": [
+                "The Return"
+            ]
+        }
     },
     {
         "place_name": "Metz, Moselle, Grand Est, France métropolitaine, France",
         "lat": 49.1196964,
         "lon": 6.1763552,
-        "popup_html": "<b>Metz, Moselle, Grand Est, France métropolitaine, France</b><hr><ul><li><b>Jean-Marie Straub:</b> <i>The Return Of The Prodigal Son</i></li></ul>"
+        "popup_html": "<b>Metz, Moselle, Grand Est, France métropolitaine, France</b><hr><ul><li><b>Jean-Marie Straub:</b> <i>The Return Of The Prodigal Son</i></li></ul>",
+        "directors": {
+            "Jean-Marie Straub": [
+                "The Return Of The Prodigal Son"
+            ]
+        }
     },
     {
         "place_name": "Santiago, Provincia de Santiago, Región Metropolitana de Santiago, Chile",
         "lat": -33.4377756,
         "lon": -70.6504502,
-        "popup_html": "<b>Santiago, Provincia de Santiago, Región Metropolitana de Santiago, Chile</b><hr><ul><li><b>Felipe Gálvez:</b> <i>The Settlers</i></li></ul>"
+        "popup_html": "<b>Santiago, Provincia de Santiago, Región Metropolitana de Santiago, Chile</b><hr><ul><li><b>Felipe Gálvez:</b> <i>The Settlers</i></li></ul>",
+        "directors": {
+            "Felipe Gálvez": [
+                "The Settlers"
+            ]
+        }
     },
     {
         "place_name": "Montbéliard, Doubs, Bourgogne-Franche-Comté, France métropolitaine, 25200, France",
         "lat": 47.5102368,
         "lon": 6.7977564,
-        "popup_html": "<b>Montbéliard, Doubs, Bourgogne-Franche-Comté, France métropolitaine, 25200, France</b><hr><ul><li><b>Frank Darabont:</b> <i>The Shawshank Redemption</i></li></ul>"
+        "popup_html": "<b>Montbéliard, Doubs, Bourgogne-Franche-Comté, France métropolitaine, 25200, France</b><hr><ul><li><b>Frank Darabont:</b> <i>The Shawshank Redemption</i></li></ul>",
+        "directors": {
+            "Frank Darabont": [
+                "The Shawshank Redemption"
+            ]
+        }
     },
     {
         "place_name": "Truro, Cornwall, England, United Kingdom",
         "lat": 50.2633173,
         "lon": -5.0518107,
-        "popup_html": "<b>Truro, Cornwall, England, United Kingdom</b><hr><ul><li><b>James Marsh:</b> <i>The Theory Of Everything</i></li></ul>"
+        "popup_html": "<b>Truro, Cornwall, England, United Kingdom</b><hr><ul><li><b>James Marsh:</b> <i>The Theory Of Everything</i></li></ul>",
+        "directors": {
+            "James Marsh": [
+                "The Theory Of Everything"
+            ]
+        }
     },
     {
         "place_name": "Milwaukee, Milwaukee County, Wisconsin, United States",
         "lat": 43.0386475,
         "lon": -87.9090751,
-        "popup_html": "<b>Milwaukee, Milwaukee County, Wisconsin, United States</b><hr><ul><li><b>James Benning:</b> <i>The United States Of America</i></li></ul>"
+        "popup_html": "<b>Milwaukee, Milwaukee County, Wisconsin, United States</b><hr><ul><li><b>James Benning:</b> <i>The United States Of America</i></li></ul>",
+        "directors": {
+            "James Benning": [
+                "The United States Of America"
+            ]
+        }
     },
     {
         "place_name": "釧路市, 釧路総合振興局, 北海道, 日本",
         "lat": 42.9849503,
         "lon": 144.3820491,
-        "popup_html": "<b>釧路市, 釧路総合振興局, 北海道, 日本</b><hr><ul><li><b>Satoshi Kon:</b> <i>Tokyo Godfathers</i></li></ul>"
+        "popup_html": "<b>釧路市, 釧路総合振興局, 北海道, 日本</b><hr><ul><li><b>Satoshi Kon:</b> <i>Tokyo Godfathers</i></li></ul>",
+        "directors": {
+            "Satoshi Kon": [
+                "Tokyo Godfathers"
+            ]
+        }
     },
     {
         "place_name": "Bloomington, Hennepin County, Minnesota, United States",
         "lat": 44.8322405,
         "lon": -93.3204872,
-        "popup_html": "<b>Bloomington, Hennepin County, Minnesota, United States</b><hr><ul><li><b>Pete Docter:</b> <i>Up</i></li></ul>"
+        "popup_html": "<b>Bloomington, Hennepin County, Minnesota, United States</b><hr><ul><li><b>Pete Docter:</b> <i>Up</i></li></ul>",
+        "directors": {
+            "Pete Docter": [
+                "Up"
+            ]
+        }
     },
     {
         "place_name": "Melbourne, City of Melbourne, Victoria, Australia",
         "lat": -37.8142454,
         "lon": 144.9631732,
-        "popup_html": "<b>Melbourne, City of Melbourne, Victoria, Australia</b><hr><ul><li><b>Leigh Whannell:</b> <i>Upgrade</i></li></ul>"
+        "popup_html": "<b>Melbourne, City of Melbourne, Victoria, Australia</b><hr><ul><li><b>Leigh Whannell:</b> <i>Upgrade</i></li></ul>",
+        "directors": {
+            "Leigh Whannell": [
+                "Upgrade"
+            ]
+        }
     },
     {
         "place_name": "Illertissen, Landkreis Neu-Ulm, Bayern, 89257, Deutschland",
         "lat": 48.221764,
         "lon": 10.1058969,
-        "popup_html": "<b>Illertissen, Landkreis Neu-Ulm, Bayern, 89257, Deutschland</b><hr><ul><li><b>Marc Forster:</b> <i>World War Z</i></li></ul>"
+        "popup_html": "<b>Illertissen, Landkreis Neu-Ulm, Bayern, 89257, Deutschland</b><hr><ul><li><b>Marc Forster:</b> <i>World War Z</i></li></ul>",
+        "directors": {
+            "Marc Forster": [
+                "World War Z"
+            ]
+        }
     },
     {
-        "place_name": "Bamako, Koulikoro, Mali",
-        "lat": 12.6132655,
-        "lon": -7.9847391,
-        "popup_html": "<b>Bamako, Koulikoro, Mali</b><hr><ul><li><b>Souleymane Cissé:</b> <i>Yeelen</i></li></ul>"
+        "place_name": "Bamako, Mali",
+        "lat": 12.649319,
+        "lon": -8.000337,
+        "popup_html": "<b>Bamako, Mali</b><hr><ul><li><b>Souleymane Cissé:</b> <i>Yeelen</i></li></ul>",
+        "directors": {
+            "Souleymane Cissé": [
+                "Yeelen"
+            ]
+        }
     },
     {
         "place_name": "小海町, 南佐久郡, 長野県, 日本",
         "lat": 36.0952764,
         "lon": 138.4838236,
-        "popup_html": "<b>小海町, 南佐久郡, 長野県, 日本</b><hr><ul><li><b>Makoto Shinkai:</b> <i>Your Name</i></li></ul>"
+        "popup_html": "<b>小海町, 南佐久郡, 長野県, 日本</b><hr><ul><li><b>Makoto Shinkai:</b> <i>Your Name</i></li></ul>",
+        "directors": {
+            "Makoto Shinkai": [
+                "Your Name"
+            ]
+        }
     }
 ]
