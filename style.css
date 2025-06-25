@@ -1,8 +1,8 @@
 /* --- General Styles --- */
 body {
     font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-    background-color: #14181C; /* Letterboxd Dark Grey */
-    color: #c3c4c5; /* Light grey text */
+    background-color: #14181C;
+    color: #c3c4c5;
     margin: 0;
     padding: 20px;
     display: flex;
@@ -11,12 +11,12 @@ body {
 
 .container {
     width: 100%;
-    max-width: 900px;
+    max-width: 1200px; /* Increased max-width for the new layout */
 }
 
 header {
     text-align: center;
-    border-bottom: 2px solid #445566; /* Letterboxd Blue-Grey */
+    border-bottom: 2px solid #445566;
     padding-bottom: 20px;
     margin-bottom: 30px;
 }
@@ -28,11 +28,12 @@ h1 {
 }
 
 h2 {
-    color: #e9a31a; /* Letterboxd Orange */
+    color: #e9a31a;
+    margin-top: 0;
 }
 
 a {
-    color: #00e054; /* Letterboxd Green */
+    color: #00e054;
     text-decoration: none;
     font-weight: bold;
 }
@@ -41,59 +42,77 @@ a:hover {
     text-decoration: underline;
 }
 
-/* --- Index Page Specific --- */
-.user-list {
+/* --- NEW: Side-by-Side Map Layout --- */
+.map-layout {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; /* Space between map and list */
+}
+
+#map-container {
+    flex: 3; /* Map takes up 3/4 of the space */
+}
+
+#map {
+    height: 75vh;
+    width: 100%;
+    background-color: #2c3440;
+    border-radius: 8px;
+    border: 2px solid #445566;
+}
+
+/* --- NEW: Director List Styling --- */
+#director-list-container {
+    flex: 1; /* List takes up 1/4 of the space */
+    background-color: #2c3440;
+    border-radius: 8px;
+    padding: 20px;
+    height: 75vh;
+    overflow-y: auto; /* Add a scrollbar if the list is long */
+}
+
+#director-list {
     list-style: none;
     padding: 0;
+    margin: 0;
 }
 
-.user-list li {
-    background-color: #2c3440;
-    margin-bottom: 10px;
-    padding: 15px;
-    border-radius: 5px;
-    transition: background-color 0.2s;
+#director-list li {
+    padding: 10px;
+    border-bottom: 1px solid #445566;
+    cursor: pointer; /* Indicates the item is clickable */
+    transition: background-color 0.2s ease-in-out;
 }
 
-.user-list li:hover {
-    background-color: #445566;
+#director-list li:hover {
+    background-color: #4d5d73;
 }
 
-/* --- Map Page Specific --- */
 .back-link {
     display: inline-block;
     margin-top: 10px;
     font-size: 0.9em;
 }
 
-#map {
-    height: 75vh; /* 75% of the viewport height */
-    width: 100%;
-    background-color: #2c3440;
-    border-radius: 8px;
-    border: 2px solid #445566;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
-}
-
-/* Leaflet Popup Styling */
+/* Leaflet Popup Styling (no changes) */
 .leaflet-popup-content-wrapper {
     background-color: #2c3440;
     color: #c3c4c5;
-    border-radius: 5px;
 }
+.leaflet-popup-content b { color: #ffffff; }
+.leaflet-popup-content i { color: #9aabbc; }
+.leaflet-popup-tip { background-color: #2c3440; }
+.leaflet-container a.leaflet-popup-close-button { color: #c3c4c5; }
 
-.leaflet-popup-content b {
-    color: #ffffff;
-}
-
-.leaflet-popup-content i {
-    color: #9aabbc;
-}
-
-.leaflet-popup-tip {
-    background-color: #2c3440;
-}
-
-.leaflet-container a.leaflet-popup-close-button {
-    color: #c3c4c5;
+/* --- NEW: Responsive Design for Mobile --- */
+@media (max-width: 768px) {
+    .map-layout {
+        flex-direction: column; /* Stack map and list vertically */
+    }
+    #map {
+        height: 50vh; /* Adjust height for smaller screens */
+    }
+    #director-list-container {
+        height: 40vh; /* Give the list a fixed height */
+    }
 }
