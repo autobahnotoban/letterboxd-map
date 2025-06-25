@@ -1,117 +1,143 @@
-
+import csv
 import requests
-import json
 import time
-from config import API_KEY
+import json
+from geopy.geocoders import Nominatim
+from pathlib import Path
+
+# --- Configuration ---
+# Import the API key directly from your config.py file
+try:
+    from config import API_KEY
+except ImportError:
+    print("FATAL: config.py not found or TMDB_API_KEY not set within it.")
+    print("Please create a config.py file with the line: TMDB_API_KEY = 'your_key_here'")
+    exit()
+
+INPUT_CSV_USERNAME = "arabaci" # We'll use this to find the input and name the output
+
+# --- API Endpoints ---
+TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/movie"
+TMDB_DETAILS_URL = "https://api.themoviedb.org/3/movie/"
+TMDB_PERSON_URL = "https://api.themoviedb.org/3/person/"
 
 
-TMDB_API_BASE_URL = "https://api.themoviedb.org/3"
-INPUT_FILENAME = "film_list.txt"
-OUTPUT_FILENAME = "enriched_data.json"
-
-DELAY_BETWEEN_REQUESTS = 0.5 
-
-def get_film_data(film_title, api_key):
-    """
-    Takes a film title and returns a dictionary with director info, or None.
-    This function contains the 3-step API call chain for one film.
-    """
-
-    search_url = f"{TMDB_API_BASE_URL}/search/movie"
-    params = {'api_key': api_key, 'query': film_title}
-    response = requests.get(search_url, params=params)
-    if response.status_code != 200:
-        return None 
-    
-    results = response.json().get('results')
-    if not results:
-        return None 
-    
-    movie_id = results[0].get('id')
-    if not movie_id:
-        return None
-
-
-    credits_url = f"{TMDB_API_BASE_URL}/movie/{movie_id}/credits"
-    params = {'api_key': api_key}
-    response = requests.get(credits_url, params=params)
-    if response.status_code != 200:
-        return None
-
-    crew = response.json().get('crew', [])
-    director_name, director_id = None, None
-    for member in crew:
-        if member.get('job') == 'Director':
-            director_name = member.get('name')
-            director_id = member.get('id')
-            break
-    
-    if not director_id:
-        return None
-        
-
-    person_url = f"{TMDB_API_BASE_URL}/person/{director_id}"
-    params = {'api_key': api_key}
-    response = requests.get(person_url, params=params)
-    if response.status_code != 200:
-        return None
-
-    birthplace = response.json().get('place_of_birth')
-    if not birthplace:
-        return None 
-    
-
-    return {
-        "film_title": film_title,
-        "director_name": director_name,
-        "birthplace": birthplace
-    }
-
-def main():
-    """
-    Main function to loop through all films and save enriched data.
-    """
-    print("Enricher script starting...")
-    
+def search_movie_id(title, year):
+    """Searches TMDB and returns the movie ID."""
+    params = {'api_key': API_KEY, 'query': title}
+    if year and year != 'N/A':
+        params['year'] = year
     try:
-        with open(INPUT_FILENAME, 'r', encoding='utf-8') as f:
-            film_titles = [line.strip() for line in f if line.strip()]
-    except FileNotFoundError:
-        print(f"Error: {INPUT_FILENAME} not found. Run scraper.py first.")
-        return
-        
-    total_films = len(film_titles)
-    print(f"Found {total_films} film titles to process.")
-    
-    final_data = []
-    
+        response = requests.get(TMDB_SEARCH_URL, params=params)
+        response.raise_for_status()
+        results = response.json().get('results', [])
+        if results:
+            return results[0]['id']
+    except requests.RequestException as e:
+        print(f"  - API Error searching for '{title}': {e}")
+    return None
 
-    for i, title in enumerate(film_titles):
-        print(f"Processing ({i+1}/{total_films}): {title}...")
-        
+def get_director_details(movie_id):
+    """Gets director name, ID, and birthplace from a movie ID."""
+    credits_url = f"{TMDB_DETAILS_URL}{movie_id}/credits"
+    params = {'api_key': API_KEY}
+    try:
+        response = requests.get(credits_url, params=params)
+        response.raise_for_status()
+        crew = response.json().get('crew', [])
+        for member in crew:
+            if member.get('job') == 'Director':
+                person_id = member.get('id')
+                if person_id:
+                    person_response = requests.get(f"{TMDB_PERSON_URL}{person_id}", params=params)
+                    person_data = person_response.json()
+                    return person_data.get('name'), person_data.get('place_of_birth')
+    except requests.RequestException as e:
+        print(f"  - API Error getting director for movie ID {movie_id}: {e}")
+    return None, None
 
-        data = get_film_data(title, API_KEY)
-        
-        if data:
-            print(f"  -> SUCCESS: Found data for director {data['director_name']}.")
-            final_data.append(data)
-        else:
-            print(f"  -> FAILED: Could not find complete data for this film.")
-        
+def geocode_location(location_name, geolocator, cache):
+    """Converts location name to lat/lon, with caching to avoid re-querying."""
+    if not location_name:
+        return None, None, None
+    if location_name in cache:
+        return cache[location_name]
+    try:
+        time.sleep(1) # IMPORTANT: Respect Nominatim's 1 req/sec policy
+        location = geolocator.geocode(location_name)
+        if location:
+            result = (location.latitude, location.longitude, location.address)
+            cache[location_name] = result
+            return result
+    except Exception as e:
+        print(f"  - Geocoding error for '{location_name}': {e}")
+    cache[location_name] = (None, None, None) # Cache failures too
+    return None, None, None
 
-        time.sleep(DELAY_BETWEEN_REQUESTS)
-
-    print("\n-----------------------------------------")
-    print(f"Processing complete.")
-    print(f"Successfully enriched {len(final_data)} out of {total_films} films.")
-
-
-    with open(OUTPUT_FILENAME, 'w', encoding='utf-8') as f:
-
-
-        json.dump(final_data, f, indent=2, ensure_ascii=False)
-
-    print(f"All data saved to {OUTPUT_FILENAME}")
-
+# --- Main Execution ---
 if __name__ == "__main__":
-    main()
+    input_file = Path(f"{INPUT_CSV_USERNAME}_watched_films.csv")
+    if not input_file.exists():
+        print(f"FATAL: Input file not found: {input_file}")
+        exit()
+
+    aggregated_locations = {}
+    geocode_cache = {}
+    geolocator = Nominatim(user_agent="film_director_mapper_v3")
+
+    print(f"Reading films from {input_file}...")
+    
+    with open(input_file, mode='r', encoding='utf-8') as infile:
+        reader = csv.DictReader(infile)
+        for row in reader:
+            title, year = row['Title'], row['Year']
+            print(f"\nProcessing: {title} ({year})")
+
+            movie_id = search_movie_id(title, year)
+            time.sleep(0.3)
+            if not movie_id:
+                continue
+
+            director_name, birthplace = get_director_details(movie_id)
+            time.sleep(0.3)
+            if not director_name or not birthplace:
+                continue
+            
+            lat, lon, full_address = geocode_location(birthplace, geolocator, geocode_cache)
+            if not lat:
+                continue
+            
+            print(f"  - Found: {director_name} from {full_address}")
+
+            if full_address not in aggregated_locations:
+                aggregated_locations[full_address] = {"lat": lat, "lon": lon, "directors": {}}
+            if director_name not in aggregated_locations[full_address]["directors"]:
+                aggregated_locations[full_address]["directors"][director_name] = []
+            
+            aggregated_locations[full_address]["directors"][director_name].append(title)
+
+    # --- Final JSON Assembly ---
+    final_json_data = []
+    for place, data in aggregated_locations.items():
+        popup_html = f"<b>{place}</b><hr><ul>"
+        for director, films in data["directors"].items():
+            film_list_str = ', '.join(films)
+            popup_html += f"<li><b>{director}:</b> <i>{film_list_str}</i></li>"
+        popup_html += "</ul>"
+        
+        final_json_data.append({
+            "place_name": place,
+            "lat": data["lat"],
+            "lon": data["lon"],
+            "popup_html": popup_html
+        })
+        
+    # --- Write Output File ---
+    output_json_filename = f"{INPUT_CSV_USERNAME}.json"
+    print(f"\nEnrichment complete. Writing data to {output_json_filename}...")
+    
+    with open(output_json_filename, 'w', encoding='utf-8') as f:
+        json.dump(final_json_data, f, indent=4, ensure_ascii=False)
+
+    print(f"\n--- DONE ---")
+    print(f"Successfully created {output_json_filename} with {len(final_json_data)} unique locations.")

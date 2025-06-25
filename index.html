@@ -3,43 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Director Map Showcase</title>
-    <style>
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; 
-            text-align: center; 
-            padding: 40px; 
-            background-color: #f8f9fa;
-            color: #333;
-        }
-        h1 { font-size: 2.5em; margin-bottom: 10px; }
-        p { font-size: 1.2em; color: #666; margin-bottom: 40px; }
-        a { 
-            font-size: 1.5em; 
-            display: block; 
-            margin: 20px auto; 
-            padding: 15px;
-            max-width: 400px;
-            text-decoration: none;
-            background-color: #0078A8;
-            color: white;
-            border-radius: 8px;
-            transition: transform 0.2s, background-color 0.2s;
-        }
-        a:hover {
-            background-color: #005a7e;
-            transform: scale(1.05);
-        }
-    </style>
+    <title>Letterboxd Director Maps</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <h1>Letterboxd Director Maps</h1>
-    <p>Choose a map to view:</p>
-    
+    <div class="container">
+        <header>
+            <h1>Letterboxd Director Maps</h1>
+            <p>A project that visualizes the birthplaces of directors from a user's watched films list.</p>
+        </header>
 
-    <a href="map.html?user=blessedheart">blessedheart's Map</a>
-    <a href="map.html?user=arabaci">arabaci's Map</a>
-
-
+        <main>
+            <h2>Available Maps</h2>
+            <ul class="user-list">
+                <!-- 
+                    You will manually add a new link here for each user
+                    you generate a JSON file for. The format is always:
+                    map.html?user=USERNAME
+                -->
+                <li><a href="map.html?user=arabaci">View Arabaci's Map</a></li>
+                <!-- <li><a href="map.html?user=dave">View Dave's Map</a></li> -->
+                <!-- <li><a href="map.html?user=lucy">View Lucy's Map</a></li> -->
+            </ul>
+        </main>
+    </div>
 </body>
 </html>

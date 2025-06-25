@@ -1,120 +1,66 @@
+// Wait for the DOM to be fully loaded before running the script
+document.addEventListener('DOMContentLoaded', () => {
 
-const urlParams = new URLSearchParams(window.location.search);
-const username = urlParams.get('user');
-const statusOverlay = document.getElementById('status-overlay');
+    // --- 1. Get the username from the URL parameter ---
+    const params = new URLSearchParams(window.location.search);
+    const username = params.get('user');
 
-if (!username) {
-    document.body.innerHTML = `<div style="text-align: center; padding: 50px; font-family: sans-serif;"><h1>Error: No User Specified</h1><p>Please return to the homepage.</p></div>`;
-    throw new Error("No user specified in URL. Halting script.");
-}
-document.title = `${username}'s Director Map`;
-document.getElementById('title-overlay').textContent = `Map of ${username}'s Director Birthplaces`;
+    const mapTitleElement = document.getElementById('map-title');
+    const mapContainer = document.getElementById('map');
 
-
-const map = L.map('map').setView([20, 0], 2);
-L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-}).addTo(map);
-
-
-const allCircles = [];
-function getRadiusForZoom(zoomLevel) {
-    if (zoomLevel <= 4) return 150000;
-    if (zoomLevel <= 6) return 50000;
-    if (zoomLevel <= 9) return 10000;
-    return 1500;
-}
-map.on('zoomend', function() {
-    const currentZoom = map.getZoom();
-    const newRadius = getRadiusForZoom(currentZoom);
-    allCircles.forEach(circle => {
-        circle.setRadius(newRadius);
-    });
-});
-
-
-async function loadAndPlotData() {
-    statusOverlay.textContent = `Loading data for ${username}...`;
-    try {
-        const response = await fetch(`${username}.json`);
-        if (!response.ok) { throw new Error(`Could not find data file: ${username}.json`); }
-        const rawFilmData = await response.json();
-
-        if (!rawFilmData || rawFilmData.length === 0) { throw new Error("Data file is empty."); }
-
-
-        const aggregatedDirectors = {};
-        rawFilmData.forEach(film => {
-            if (!film || !film.director_name || !film.birthplace) return;
-            const directorName = film.director_name;
-            if (!aggregatedDirectors[directorName]) {
-                aggregatedDirectors[directorName] = { birthplace: film.birthplace, films: [] };
-            }
-            aggregatedDirectors[directorName].films.push(film.film_title);
-        });
-
-
-        const locationData = {};
-        for (const directorName in aggregatedDirectors) {
-            const directorInfo = aggregatedDirectors[directorName];
-            const birthplace = directorInfo.birthplace;
-            if (!locationData[birthplace]) {
-                locationData[birthplace] = { directors: [] };
-            }
-            locationData[birthplace].directors.push({ name: directorName, films: directorInfo.films });
-        }
-
-        const totalLocations = Object.keys(locationData).length;
-        let processedCount = 0;
-        let plottedCount = 0;
-        const provider = new GeoSearch.OpenStreetMapProvider();
-
-        for (const originalBirthplace of Object.keys(locationData)) {
-            processedCount++;
-            let cleanedBirthplace = originalBirthplace.replace(/\[.*?\]/g, '').replace('West Germany', 'Germany').replace('USSR', '').replace('Ukrainian SSR', '').trim().replace(/,$/, '');
-            if (!cleanedBirthplace) continue;
-
-            const results = await provider.search({ query: cleanedBirthplace });
-
-            if (results && results.length > 0) {
-
-                statusOverlay.textContent = `Added: ${originalBirthplace} (${processedCount}/${totalLocations})`;
-                
-                const location = results[0];
-                const directorsList = locationData[originalBirthplace].directors;
-                let popupContent = `<h3>${originalBirthplace}</h3><hr>`;
-                directorsList.forEach(director => {
-                    popupContent += `<h4>${director.name}</h4><ul>`;
-                    director.films.sort().forEach(film => {
-                        popupContent += `<li>${film}</li>`;
-                    });
-                    popupContent += `</ul>`;
-                });
-
-                const initialRadius = getRadiusForZoom(map.getZoom());
-                const marker = L.circle([location.y, location.x], {
-                    radius: initialRadius, fillColor: "#3388ff", fillOpacity: 0.5, weight: 1, color: "#004C99"
-                });
-                
-                marker.bindPopup(popupContent).addTo(map);
-                allCircles.push(marker);
-                plottedCount++;
-            } else {
-                statusOverlay.textContent = `Skipping: ${originalBirthplace} (${processedCount}/${totalLocations})`;
-            }
-        }
-        
-
-        statusOverlay.textContent = `Complete! Plotted ${plottedCount} of ${totalLocations} locations.`;
-        statusOverlay.classList.add('complete');
-
-    } catch (error) {
-        console.error("A critical error occurred:", error);
-
-        statusOverlay.textContent = `Error: ${error.message}`;
-        statusOverlay.classList.add('error');
+    if (!username) {
+        mapTitleElement.textContent = 'Error: No user specified.';
+        mapContainer.innerHTML = '<p style="text-align:center;">Please return to the user list and select a map to view.</p>';
+        return; // Stop the script
     }
-}
 
+    // --- 2. Update the page title ---
+    mapTitleElement.textContent = `${username.charAt(0).toUpperCase() + username.slice(1)}'s Director Map`;
+    
+    // --- 3. Initialize the Leaflet map ---
+    // Set a default view (e.g., centered on Europe)
+    const map = L.map('map').setView([50, 10], 2);
 
-loadAndPlotData();
+    // Add the map tiles (the visual map background)
+    L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_all/{z}/{x}/{y}{r}.png', {
+        attribution: '© <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors © <a href="https://carto.com/attributions">CARTO</a>',
+        subdomains: 'abcd',
+        maxZoom: 20
+    }).addTo(map);
+
+    // --- 4. Fetch the user's specific JSON file ---
+    const dataUrl = `${username}.json`;
+
+    fetch(dataUrl)
+        .then(response => {
+            if (!response.ok) {
+                // Handle cases where the JSON file doesn't exist (404 error)
+                throw new Error(`Could not find map data for user: ${username}`);
+            }
+            return response.json();
+        })
+        .then(locations => {
+            if (locations.length === 0) {
+                 mapContainer.innerHTML = '<p style="text-align:center;">No director birthplace data was found for this user.</p>';
+                 return;
+            }
+
+            // --- 5. Add markers to the map ---
+            const markers = [];
+            locations.forEach(location => {
+                const marker = L.marker([location.lat, location.lon])
+                    .addTo(map)
+                    .bindPopup(location.popup_html);
+                markers.push(marker);
+            });
+            
+            // Automatically adjust the map's view to fit all markers
+            const group = new L.featureGroup(markers);
+            map.fitBounds(group.getBounds().pad(0.2)); // .pad adds a nice margin
+        })
+        .catch(error => {
+            console.error('Error loading map data:', error);
+            mapTitleElement.textContent = 'Error Loading Map';
+            mapContainer.innerHTML = `<p style="text-align:center; color: #ff6666;">${error.message}. Please check if the file '${dataUrl}' exists in the repository.</p>`;
+        });
+});
