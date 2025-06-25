@@ -12,7 +12,7 @@ except ImportError:
     print("FATAL: config.py not found or TMDB_API_KEY not set within it.")
     exit()
 
-INPUT_CSV_USERNAME = "arabaci"
+INPUT_CSV_USERNAME = "avapersona"
 TMDB_SEARCH_URL = "https://api.themoviedb.org/3/search/movie"
 TMDB_DETAILS_URL = "https://api.themoviedb.org/3/movie/"
 TMDB_PERSON_URL = "https://api.themoviedb.org/3/person/"

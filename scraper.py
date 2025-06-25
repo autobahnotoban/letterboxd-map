@@ -95,7 +95,7 @@ def save_to_csv(films_data, filename="watched_films.csv"):
 
 
 if __name__ == "__main__":
-    target_username = "arabaci"
+    target_username = "avapersona"
     
     all_films_data = scrape_letterboxd_watched(target_username)
     
